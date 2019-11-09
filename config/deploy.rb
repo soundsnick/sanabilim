@@ -1,5 +1,5 @@
 server '109.248.250.22', port: 22, roles: [:web, :app, :db], primary: true
-set :repo_url,        'git@github.com:soundsnick/sanabilim_prod.git'
+set :repo_url,        'git@github.com:soundsnick/sanabilim.git'
 set :application,     'sanabilim'
 set :user,            'deploy'
 set :keep_releases,   0
