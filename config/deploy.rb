@@ -1,6 +1,6 @@
-server '93.170.128.45', port: 22, roles: [:web, :app, :db], primary: true
-set :repo_url,        'git@github.com:soundsnick/upmind_prod.git'
-set :application,     'upmind'
+server '109.248.250.22', port: 22, roles: [:web, :app, :db], primary: true
+set :repo_url,        'git@github.com:soundsnick/sanabilim_prod.git'
+set :application,     'sanabilim'
 set :user,            'deploy'
 set :keep_releases,   0
 set :puma_threads,    [4, 16]
@@ -66,13 +66,13 @@ namespace :deploy do
   end
   task :image_backup do
     on roles(:app) do
-      execute "cp -r -n /home/deploy/www/upmind/current/public/uploads/* /home/deploy/backup/ 2>/dev/null || :"
+      execute "cp -r -n /home/deploy/www/sanabilim/current/public/uploads/* /home/deploy/backup/ 2>/dev/null || :"
     end
   end
   task :image_back do
     on roles(:app) do
-      execute "mkdir /home/deploy/www/upmind/current/public/uploads"
-      execute "cp -r -n /home/deploy/backup/* /home/deploy/www/upmind/current/public/uploads/ 2>/dev/null || :"
+      execute "mkdir /home/deploy/www/sanabilim/current/public/uploads"
+      execute "cp -r -n /home/deploy/backup/* /home/deploy/www/sanabilim/current/public/uploads/ 2>/dev/null || :"
     end
   end
   before :starting,     :check_revision
