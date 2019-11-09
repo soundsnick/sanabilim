@@ -35,7 +35,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: deploy
+-- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.ar_internal_metadata (
@@ -46,10 +46,10 @@ CREATE TABLE public.ar_internal_metadata (
 );
 
 
-ALTER TABLE public.ar_internal_metadata OWNER TO deploy;
+ALTER TABLE public.ar_internal_metadata OWNER TO yernazar;
 
 --
--- Name: buys; Type: TABLE; Schema: public; Owner: deploy
+-- Name: buys; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.buys (
@@ -62,10 +62,10 @@ CREATE TABLE public.buys (
 );
 
 
-ALTER TABLE public.buys OWNER TO deploy;
+ALTER TABLE public.buys OWNER TO yernazar;
 
 --
--- Name: buys_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: buys_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.buys_id_seq
@@ -76,17 +76,17 @@ CREATE SEQUENCE public.buys_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.buys_id_seq OWNER TO deploy;
+ALTER TABLE public.buys_id_seq OWNER TO yernazar;
 
 --
--- Name: buys_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: buys_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.buys_id_seq OWNED BY public.buys.id;
 
 
 --
--- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: deploy
+-- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.ckeditor_assets (
@@ -100,10 +100,10 @@ CREATE TABLE public.ckeditor_assets (
 );
 
 
-ALTER TABLE public.ckeditor_assets OWNER TO deploy;
+ALTER TABLE public.ckeditor_assets OWNER TO yernazar;
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.ckeditor_assets_id_seq
@@ -114,17 +114,17 @@ CREATE SEQUENCE public.ckeditor_assets_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.ckeditor_assets_id_seq OWNER TO deploy;
+ALTER TABLE public.ckeditor_assets_id_seq OWNER TO yernazar;
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.ckeditor_assets_id_seq OWNED BY public.ckeditor_assets.id;
 
 
 --
--- Name: comments; Type: TABLE; Schema: public; Owner: deploy
+-- Name: comments; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.comments (
@@ -137,10 +137,10 @@ CREATE TABLE public.comments (
 );
 
 
-ALTER TABLE public.comments OWNER TO deploy;
+ALTER TABLE public.comments OWNER TO yernazar;
 
 --
--- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.comments_id_seq
@@ -151,17 +151,17 @@ CREATE SEQUENCE public.comments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.comments_id_seq OWNER TO deploy;
+ALTER TABLE public.comments_id_seq OWNER TO yernazar;
 
 --
--- Name: comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.comments_id_seq OWNED BY public.comments.id;
 
 
 --
--- Name: course_faqs; Type: TABLE; Schema: public; Owner: deploy
+-- Name: course_faqs; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.course_faqs (
@@ -172,10 +172,10 @@ CREATE TABLE public.course_faqs (
 );
 
 
-ALTER TABLE public.course_faqs OWNER TO deploy;
+ALTER TABLE public.course_faqs OWNER TO yernazar;
 
 --
--- Name: course_faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: course_faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.course_faqs_id_seq
@@ -186,17 +186,17 @@ CREATE SEQUENCE public.course_faqs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.course_faqs_id_seq OWNER TO deploy;
+ALTER TABLE public.course_faqs_id_seq OWNER TO yernazar;
 
 --
--- Name: course_faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: course_faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.course_faqs_id_seq OWNED BY public.course_faqs.id;
 
 
 --
--- Name: course_whos; Type: TABLE; Schema: public; Owner: deploy
+-- Name: course_whos; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.course_whos (
@@ -208,10 +208,10 @@ CREATE TABLE public.course_whos (
 );
 
 
-ALTER TABLE public.course_whos OWNER TO deploy;
+ALTER TABLE public.course_whos OWNER TO yernazar;
 
 --
--- Name: course_whos_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: course_whos_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.course_whos_id_seq
@@ -222,17 +222,17 @@ CREATE SEQUENCE public.course_whos_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.course_whos_id_seq OWNER TO deploy;
+ALTER TABLE public.course_whos_id_seq OWNER TO yernazar;
 
 --
--- Name: course_whos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: course_whos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.course_whos_id_seq OWNED BY public.course_whos.id;
 
 
 --
--- Name: courses; Type: TABLE; Schema: public; Owner: deploy
+-- Name: courses; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.courses (
@@ -253,10 +253,10 @@ CREATE TABLE public.courses (
 );
 
 
-ALTER TABLE public.courses OWNER TO deploy;
+ALTER TABLE public.courses OWNER TO yernazar;
 
 --
--- Name: courses_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: courses_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.courses_id_seq
@@ -267,17 +267,17 @@ CREATE SEQUENCE public.courses_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.courses_id_seq OWNER TO deploy;
+ALTER TABLE public.courses_id_seq OWNER TO yernazar;
 
 --
--- Name: courses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: courses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.courses_id_seq OWNED BY public.courses.id;
 
 
 --
--- Name: courses_users; Type: TABLE; Schema: public; Owner: deploy
+-- Name: courses_users; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.courses_users (
@@ -287,10 +287,10 @@ CREATE TABLE public.courses_users (
 );
 
 
-ALTER TABLE public.courses_users OWNER TO deploy;
+ALTER TABLE public.courses_users OWNER TO yernazar;
 
 --
--- Name: courses_users_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: courses_users_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.courses_users_id_seq
@@ -301,17 +301,17 @@ CREATE SEQUENCE public.courses_users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.courses_users_id_seq OWNER TO deploy;
+ALTER TABLE public.courses_users_id_seq OWNER TO yernazar;
 
 --
--- Name: courses_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: courses_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.courses_users_id_seq OWNED BY public.courses_users.id;
 
 
 --
--- Name: faq_categories; Type: TABLE; Schema: public; Owner: deploy
+-- Name: faq_categories; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.faq_categories (
@@ -321,10 +321,10 @@ CREATE TABLE public.faq_categories (
 );
 
 
-ALTER TABLE public.faq_categories OWNER TO deploy;
+ALTER TABLE public.faq_categories OWNER TO yernazar;
 
 --
--- Name: faq_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: faq_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.faq_categories_id_seq
@@ -335,17 +335,17 @@ CREATE SEQUENCE public.faq_categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.faq_categories_id_seq OWNER TO deploy;
+ALTER TABLE public.faq_categories_id_seq OWNER TO yernazar;
 
 --
--- Name: faq_categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: faq_categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.faq_categories_id_seq OWNED BY public.faq_categories.id;
 
 
 --
--- Name: faqs; Type: TABLE; Schema: public; Owner: deploy
+-- Name: faqs; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.faqs (
@@ -356,10 +356,10 @@ CREATE TABLE public.faqs (
 );
 
 
-ALTER TABLE public.faqs OWNER TO deploy;
+ALTER TABLE public.faqs OWNER TO yernazar;
 
 --
--- Name: faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.faqs_id_seq
@@ -370,17 +370,17 @@ CREATE SEQUENCE public.faqs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.faqs_id_seq OWNER TO deploy;
+ALTER TABLE public.faqs_id_seq OWNER TO yernazar;
 
 --
--- Name: faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.faqs_id_seq OWNED BY public.faqs.id;
 
 
 --
--- Name: feedbacks; Type: TABLE; Schema: public; Owner: deploy
+-- Name: feedbacks; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.feedbacks (
@@ -395,10 +395,10 @@ CREATE TABLE public.feedbacks (
 );
 
 
-ALTER TABLE public.feedbacks OWNER TO deploy;
+ALTER TABLE public.feedbacks OWNER TO yernazar;
 
 --
--- Name: feedbacks_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: feedbacks_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.feedbacks_id_seq
@@ -409,17 +409,17 @@ CREATE SEQUENCE public.feedbacks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.feedbacks_id_seq OWNER TO deploy;
+ALTER TABLE public.feedbacks_id_seq OWNER TO yernazar;
 
 --
--- Name: feedbacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: feedbacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.feedbacks_id_seq OWNED BY public.feedbacks.id;
 
 
 --
--- Name: hometasks; Type: TABLE; Schema: public; Owner: deploy
+-- Name: hometasks; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.hometasks (
@@ -434,10 +434,10 @@ CREATE TABLE public.hometasks (
 );
 
 
-ALTER TABLE public.hometasks OWNER TO deploy;
+ALTER TABLE public.hometasks OWNER TO yernazar;
 
 --
--- Name: hometasks_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: hometasks_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.hometasks_id_seq
@@ -448,17 +448,17 @@ CREATE SEQUENCE public.hometasks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.hometasks_id_seq OWNER TO deploy;
+ALTER TABLE public.hometasks_id_seq OWNER TO yernazar;
 
 --
--- Name: hometasks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: hometasks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.hometasks_id_seq OWNED BY public.hometasks.id;
 
 
 --
--- Name: languages; Type: TABLE; Schema: public; Owner: deploy
+-- Name: languages; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.languages (
@@ -468,10 +468,10 @@ CREATE TABLE public.languages (
 );
 
 
-ALTER TABLE public.languages OWNER TO deploy;
+ALTER TABLE public.languages OWNER TO yernazar;
 
 --
--- Name: languages_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: languages_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.languages_id_seq
@@ -482,17 +482,17 @@ CREATE SEQUENCE public.languages_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.languages_id_seq OWNER TO deploy;
+ALTER TABLE public.languages_id_seq OWNER TO yernazar;
 
 --
--- Name: languages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: languages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.languages_id_seq OWNED BY public.languages.id;
 
 
 --
--- Name: lessons; Type: TABLE; Schema: public; Owner: deploy
+-- Name: lessons; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.lessons (
@@ -510,10 +510,10 @@ CREATE TABLE public.lessons (
 );
 
 
-ALTER TABLE public.lessons OWNER TO deploy;
+ALTER TABLE public.lessons OWNER TO yernazar;
 
 --
--- Name: lessons_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: lessons_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.lessons_id_seq
@@ -524,17 +524,160 @@ CREATE SEQUENCE public.lessons_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.lessons_id_seq OWNER TO deploy;
+ALTER TABLE public.lessons_id_seq OWNER TO yernazar;
 
 --
--- Name: lessons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: lessons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.lessons_id_seq OWNED BY public.lessons.id;
 
 
 --
--- Name: news; Type: TABLE; Schema: public; Owner: deploy
+-- Name: multiple_answers; Type: TABLE; Schema: public; Owner: yernazar
+--
+
+CREATE TABLE public.multiple_answers (
+    id bigint NOT NULL,
+    multiple_question_id integer,
+    answer text,
+    correct boolean
+);
+
+
+ALTER TABLE public.multiple_answers OWNER TO yernazar;
+
+--
+-- Name: multiple_answers_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+--
+
+CREATE SEQUENCE public.multiple_answers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.multiple_answers_id_seq OWNER TO yernazar;
+
+--
+-- Name: multiple_answers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+--
+
+ALTER SEQUENCE public.multiple_answers_id_seq OWNED BY public.multiple_answers.id;
+
+
+--
+-- Name: multiple_questions; Type: TABLE; Schema: public; Owner: yernazar
+--
+
+CREATE TABLE public.multiple_questions (
+    id bigint NOT NULL,
+    multiple_id integer,
+    question text
+);
+
+
+ALTER TABLE public.multiple_questions OWNER TO yernazar;
+
+--
+-- Name: multiple_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+--
+
+CREATE SEQUENCE public.multiple_questions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.multiple_questions_id_seq OWNER TO yernazar;
+
+--
+-- Name: multiple_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+--
+
+ALTER SEQUENCE public.multiple_questions_id_seq OWNED BY public.multiple_questions.id;
+
+
+--
+-- Name: multiple_results; Type: TABLE; Schema: public; Owner: yernazar
+--
+
+CREATE TABLE public.multiple_results (
+    id bigint NOT NULL,
+    multiple_id integer,
+    user_id integer,
+    result double precision,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.multiple_results OWNER TO yernazar;
+
+--
+-- Name: multiple_results_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+--
+
+CREATE SEQUENCE public.multiple_results_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.multiple_results_id_seq OWNER TO yernazar;
+
+--
+-- Name: multiple_results_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+--
+
+ALTER SEQUENCE public.multiple_results_id_seq OWNED BY public.multiple_results.id;
+
+
+--
+-- Name: multiples; Type: TABLE; Schema: public; Owner: yernazar
+--
+
+CREATE TABLE public.multiples (
+    id bigint NOT NULL,
+    lesson_id integer,
+    title character varying,
+    description text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.multiples OWNER TO yernazar;
+
+--
+-- Name: multiples_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+--
+
+CREATE SEQUENCE public.multiples_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.multiples_id_seq OWNER TO yernazar;
+
+--
+-- Name: multiples_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+--
+
+ALTER SEQUENCE public.multiples_id_seq OWNED BY public.multiples.id;
+
+
+--
+-- Name: news; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.news (
@@ -551,10 +694,10 @@ CREATE TABLE public.news (
 );
 
 
-ALTER TABLE public.news OWNER TO deploy;
+ALTER TABLE public.news OWNER TO yernazar;
 
 --
--- Name: news_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: news_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.news_id_seq
@@ -565,17 +708,17 @@ CREATE SEQUENCE public.news_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.news_id_seq OWNER TO deploy;
+ALTER TABLE public.news_id_seq OWNER TO yernazar;
 
 --
--- Name: news_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: news_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.news_id_seq OWNED BY public.news.id;
 
 
 --
--- Name: programs; Type: TABLE; Schema: public; Owner: deploy
+-- Name: programs; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.programs (
@@ -586,10 +729,10 @@ CREATE TABLE public.programs (
 );
 
 
-ALTER TABLE public.programs OWNER TO deploy;
+ALTER TABLE public.programs OWNER TO yernazar;
 
 --
--- Name: programs_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: programs_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.programs_id_seq
@@ -600,17 +743,17 @@ CREATE SEQUENCE public.programs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.programs_id_seq OWNER TO deploy;
+ALTER TABLE public.programs_id_seq OWNER TO yernazar;
 
 --
--- Name: programs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: programs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.programs_id_seq OWNED BY public.programs.id;
 
 
 --
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: deploy
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.schema_migrations (
@@ -618,10 +761,10 @@ CREATE TABLE public.schema_migrations (
 );
 
 
-ALTER TABLE public.schema_migrations OWNER TO deploy;
+ALTER TABLE public.schema_migrations OWNER TO yernazar;
 
 --
--- Name: socials; Type: TABLE; Schema: public; Owner: deploy
+-- Name: socials; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.socials (
@@ -632,10 +775,10 @@ CREATE TABLE public.socials (
 );
 
 
-ALTER TABLE public.socials OWNER TO deploy;
+ALTER TABLE public.socials OWNER TO yernazar;
 
 --
--- Name: socials_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: socials_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.socials_id_seq
@@ -646,17 +789,17 @@ CREATE SEQUENCE public.socials_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.socials_id_seq OWNER TO deploy;
+ALTER TABLE public.socials_id_seq OWNER TO yernazar;
 
 --
--- Name: socials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: socials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.socials_id_seq OWNED BY public.socials.id;
 
 
 --
--- Name: student_questions; Type: TABLE; Schema: public; Owner: deploy
+-- Name: student_questions; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.student_questions (
@@ -670,10 +813,10 @@ CREATE TABLE public.student_questions (
 );
 
 
-ALTER TABLE public.student_questions OWNER TO deploy;
+ALTER TABLE public.student_questions OWNER TO yernazar;
 
 --
--- Name: student_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: student_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.student_questions_id_seq
@@ -684,17 +827,17 @@ CREATE SEQUENCE public.student_questions_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.student_questions_id_seq OWNER TO deploy;
+ALTER TABLE public.student_questions_id_seq OWNER TO yernazar;
 
 --
--- Name: student_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: student_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.student_questions_id_seq OWNED BY public.student_questions.id;
 
 
 --
--- Name: template_modules; Type: TABLE; Schema: public; Owner: deploy
+-- Name: template_modules; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.template_modules (
@@ -705,10 +848,10 @@ CREATE TABLE public.template_modules (
 );
 
 
-ALTER TABLE public.template_modules OWNER TO deploy;
+ALTER TABLE public.template_modules OWNER TO yernazar;
 
 --
--- Name: template_modules_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: template_modules_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.template_modules_id_seq
@@ -719,17 +862,17 @@ CREATE SEQUENCE public.template_modules_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.template_modules_id_seq OWNER TO deploy;
+ALTER TABLE public.template_modules_id_seq OWNER TO yernazar;
 
 --
--- Name: template_modules_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: template_modules_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.template_modules_id_seq OWNED BY public.template_modules.id;
 
 
 --
--- Name: templates; Type: TABLE; Schema: public; Owner: deploy
+-- Name: templates; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.templates (
@@ -740,10 +883,10 @@ CREATE TABLE public.templates (
 );
 
 
-ALTER TABLE public.templates OWNER TO deploy;
+ALTER TABLE public.templates OWNER TO yernazar;
 
 --
--- Name: templates_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: templates_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.templates_id_seq
@@ -754,17 +897,52 @@ CREATE SEQUENCE public.templates_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.templates_id_seq OWNER TO deploy;
+ALTER TABLE public.templates_id_seq OWNER TO yernazar;
 
 --
--- Name: templates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: templates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.templates_id_seq OWNED BY public.templates.id;
 
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: deploy
+-- Name: user_choices; Type: TABLE; Schema: public; Owner: yernazar
+--
+
+CREATE TABLE public.user_choices (
+    id bigint NOT NULL,
+    multiple_question_id integer,
+    multiple_answer_id integer,
+    user_id integer
+);
+
+
+ALTER TABLE public.user_choices OWNER TO yernazar;
+
+--
+-- Name: user_choices_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+--
+
+CREATE SEQUENCE public.user_choices_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_choices_id_seq OWNER TO yernazar;
+
+--
+-- Name: user_choices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+--
+
+ALTER SEQUENCE public.user_choices_id_seq OWNED BY public.user_choices.id;
+
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: yernazar
 --
 
 CREATE TABLE public.users (
@@ -785,10 +963,10 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO deploy;
+ALTER TABLE public.users OWNER TO yernazar;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -799,166 +977,201 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO deploy;
+ALTER TABLE public.users_id_seq OWNER TO yernazar;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: buys id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: buys id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.buys ALTER COLUMN id SET DEFAULT nextval('public.buys_id_seq'::regclass);
 
 
 --
--- Name: ckeditor_assets id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: ckeditor_assets id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.ckeditor_assets ALTER COLUMN id SET DEFAULT nextval('public.ckeditor_assets_id_seq'::regclass);
 
 
 --
--- Name: comments id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: comments id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.comments ALTER COLUMN id SET DEFAULT nextval('public.comments_id_seq'::regclass);
 
 
 --
--- Name: course_faqs id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: course_faqs id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.course_faqs ALTER COLUMN id SET DEFAULT nextval('public.course_faqs_id_seq'::regclass);
 
 
 --
--- Name: course_whos id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: course_whos id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.course_whos ALTER COLUMN id SET DEFAULT nextval('public.course_whos_id_seq'::regclass);
 
 
 --
--- Name: courses id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: courses id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.courses ALTER COLUMN id SET DEFAULT nextval('public.courses_id_seq'::regclass);
 
 
 --
--- Name: courses_users id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: courses_users id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.courses_users ALTER COLUMN id SET DEFAULT nextval('public.courses_users_id_seq'::regclass);
 
 
 --
--- Name: faq_categories id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: faq_categories id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.faq_categories ALTER COLUMN id SET DEFAULT nextval('public.faq_categories_id_seq'::regclass);
 
 
 --
--- Name: faqs id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: faqs id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.faqs ALTER COLUMN id SET DEFAULT nextval('public.faqs_id_seq'::regclass);
 
 
 --
--- Name: feedbacks id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: feedbacks id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.feedbacks ALTER COLUMN id SET DEFAULT nextval('public.feedbacks_id_seq'::regclass);
 
 
 --
--- Name: hometasks id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: hometasks id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.hometasks ALTER COLUMN id SET DEFAULT nextval('public.hometasks_id_seq'::regclass);
 
 
 --
--- Name: languages id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: languages id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.languages ALTER COLUMN id SET DEFAULT nextval('public.languages_id_seq'::regclass);
 
 
 --
--- Name: lessons id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: lessons id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.lessons ALTER COLUMN id SET DEFAULT nextval('public.lessons_id_seq'::regclass);
 
 
 --
--- Name: news id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: multiple_answers id; Type: DEFAULT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiple_answers ALTER COLUMN id SET DEFAULT nextval('public.multiple_answers_id_seq'::regclass);
+
+
+--
+-- Name: multiple_questions id; Type: DEFAULT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiple_questions ALTER COLUMN id SET DEFAULT nextval('public.multiple_questions_id_seq'::regclass);
+
+
+--
+-- Name: multiple_results id; Type: DEFAULT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiple_results ALTER COLUMN id SET DEFAULT nextval('public.multiple_results_id_seq'::regclass);
+
+
+--
+-- Name: multiples id; Type: DEFAULT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiples ALTER COLUMN id SET DEFAULT nextval('public.multiples_id_seq'::regclass);
+
+
+--
+-- Name: news id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.news ALTER COLUMN id SET DEFAULT nextval('public.news_id_seq'::regclass);
 
 
 --
--- Name: programs id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: programs id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.programs ALTER COLUMN id SET DEFAULT nextval('public.programs_id_seq'::regclass);
 
 
 --
--- Name: socials id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: socials id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.socials ALTER COLUMN id SET DEFAULT nextval('public.socials_id_seq'::regclass);
 
 
 --
--- Name: student_questions id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: student_questions id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.student_questions ALTER COLUMN id SET DEFAULT nextval('public.student_questions_id_seq'::regclass);
 
 
 --
--- Name: template_modules id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: template_modules id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.template_modules ALTER COLUMN id SET DEFAULT nextval('public.template_modules_id_seq'::regclass);
 
 
 --
--- Name: templates id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: templates id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.templates ALTER COLUMN id SET DEFAULT nextval('public.templates_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: deploy
+-- Name: user_choices id; Type: DEFAULT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.user_choices ALTER COLUMN id SET DEFAULT nextval('public.user_choices_id_seq'::regclass);
+
+
+--
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.ar_internal_metadata (key, value, created_at, updated_at) FROM stdin;
-environment	production	2019-08-25 17:18:48.240333	2019-08-25 17:18:48.240333
+environment	development	2019-08-25 17:02:05.434611	2019-08-25 17:02:05.434611
 \.
 
 
 --
--- Data for Name: buys; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: buys; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.buys (id, name, phone, course_id, created_at, updated_at) FROM stdin;
@@ -1300,7 +1513,7 @@ COPY public.buys (id, name, phone, course_id, created_at, updated_at) FROM stdin
 
 
 --
--- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.ckeditor_assets (id, data_file_name, data_content_type, data_file_size, type, created_at, updated_at) FROM stdin;
@@ -1308,7 +1521,7 @@ COPY public.ckeditor_assets (id, data_file_name, data_content_type, data_file_si
 
 
 --
--- Data for Name: comments; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: comments; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.comments (id, user_id, lesson_id, text, created_at, updated_at) FROM stdin;
@@ -1351,7 +1564,7 @@ COPY public.comments (id, user_id, lesson_id, text, created_at, updated_at) FROM
 
 
 --
--- Data for Name: course_faqs; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: course_faqs; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.course_faqs (id, title, answer, course_id) FROM stdin;
@@ -1429,7 +1642,7 @@ COPY public.course_faqs (id, title, answer, course_id) FROM stdin;
 
 
 --
--- Data for Name: course_whos; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: course_whos; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.course_whos (id, icon, title, description, course_id) FROM stdin;
@@ -1464,7 +1677,7 @@ COPY public.course_whos (id, icon, title, description, course_id) FROM stdin;
 
 
 --
--- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.courses (id, title, image, description, created_at, updated_at, color, language_id, landing_header_title, landing_header_paragraph, landing_about_title, landing_about_paragraph, landing_program_description, price) FROM stdin;
@@ -1478,7 +1691,7 @@ COPY public.courses (id, title, image, description, created_at, updated_at, colo
 
 
 --
--- Data for Name: courses_users; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: courses_users; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.courses_users (id, user_id, course_id) FROM stdin;
@@ -1542,7 +1755,7 @@ COPY public.courses_users (id, user_id, course_id) FROM stdin;
 
 
 --
--- Data for Name: faq_categories; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: faq_categories; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.faq_categories (id, title, language_id) FROM stdin;
@@ -1552,7 +1765,7 @@ COPY public.faq_categories (id, title, language_id) FROM stdin;
 
 
 --
--- Data for Name: faqs; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: faqs; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.faqs (id, question, answer, faq_category_id) FROM stdin;
@@ -1564,7 +1777,7 @@ COPY public.faqs (id, question, answer, faq_category_id) FROM stdin;
 
 
 --
--- Data for Name: feedbacks; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: feedbacks; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.feedbacks (id, first_question, second_question, third_question, user_id, created_at, updated_at, lesson_id) FROM stdin;
@@ -1615,7 +1828,7 @@ COPY public.feedbacks (id, first_question, second_question, third_question, user
 
 
 --
--- Data for Name: hometasks; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: hometasks; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.hometasks (id, user_id, lesson_id, file, created_at, updated_at, rate, comment) FROM stdin;
@@ -1756,7 +1969,7 @@ COPY public.hometasks (id, user_id, lesson_id, file, created_at, updated_at, rat
 
 
 --
--- Data for Name: languages; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: languages; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.languages (id, title, abbr) FROM stdin;
@@ -1766,7 +1979,7 @@ COPY public.languages (id, title, abbr) FROM stdin;
 
 
 --
--- Data for Name: lessons; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: lessons; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.lessons (id, title, content, course_id, created_at, updated_at, video, content_mini, task, description, materials) FROM stdin;
@@ -1847,7 +2060,48 @@ COPY public.lessons (id, title, content, course_id, created_at, updated_at, vide
 
 
 --
--- Data for Name: news; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: multiple_answers; Type: TABLE DATA; Schema: public; Owner: yernazar
+--
+
+COPY public.multiple_answers (id, multiple_question_id, answer, correct) FROM stdin;
+1	1	Да	t
+2	1	Нет	f
+3	2	Да нет	f
+4	2	Ты че не	f
+5	2	Да	t
+6	2	Ага	f
+\.
+
+
+--
+-- Data for Name: multiple_questions; Type: TABLE DATA; Schema: public; Owner: yernazar
+--
+
+COPY public.multiple_questions (id, multiple_id, question) FROM stdin;
+1	1	Как называлась
+2	1	Ханымыз ким
+\.
+
+
+--
+-- Data for Name: multiple_results; Type: TABLE DATA; Schema: public; Owner: yernazar
+--
+
+COPY public.multiple_results (id, multiple_id, user_id, result, created_at, updated_at) FROM stdin;
+1	1	291	50	2019-10-25 20:17:47.520147	2019-10-25 20:17:47.520147
+\.
+
+
+--
+-- Data for Name: multiples; Type: TABLE DATA; Schema: public; Owner: yernazar
+--
+
+COPY public.multiples (id, lesson_id, title, description, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: news; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.news (id, title, description_short, description, image, created_at, updated_at, image_dominant_color, content, language_id) FROM stdin;
@@ -1858,7 +2112,7 @@ COPY public.news (id, title, description_short, description, image, created_at, 
 
 
 --
--- Data for Name: programs; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: programs; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.programs (id, title, description, course_id) FROM stdin;
@@ -1872,7 +2126,7 @@ COPY public.programs (id, title, description, course_id) FROM stdin;
 
 
 --
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.schema_migrations (version) FROM stdin;
@@ -1917,11 +2171,17 @@ COPY public.schema_migrations (version) FROM stdin;
 20190719153144
 20190720124105
 20190720125136
+20191025103433
+20191025103834
+20191025103959
+20191025104218
+20191025105025
+20191025201051
 \.
 
 
 --
--- Data for Name: socials; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: socials; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.socials (id, link, label, icon) FROM stdin;
@@ -1933,7 +2193,7 @@ COPY public.socials (id, link, label, icon) FROM stdin;
 
 
 --
--- Data for Name: student_questions; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: student_questions; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.student_questions (id, lesson_id, user_id, question, created_at, updated_at, answer) FROM stdin;
@@ -1971,7 +2231,7 @@ COPY public.student_questions (id, lesson_id, user_id, question, created_at, upd
 
 
 --
--- Data for Name: template_modules; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: template_modules; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.template_modules (id, title, language_id, label) FROM stdin;
@@ -2017,7 +2277,7 @@ COPY public.template_modules (id, title, language_id, label) FROM stdin;
 
 
 --
--- Data for Name: templates; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: templates; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.templates (id, label, template_module_id, title) FROM stdin;
@@ -2130,12 +2390,15 @@ COPY public.templates (id, label, template_module_id, title) FROM stdin;
 109	task_view	27	Перейти к домашнем заданию
 110	task_view	28	Үй тапсырмасы
 111	title	29	Онлайн курсы на казахском языке
+112	title	30	Қазақ тіліндегі онлайн сабақтар
+113	description	30	Тиімділікті арттыру, жаңа қабілеттерді меңгеру, даму курстары
 114	description	29	Увеличение эффективности, приобретение новых навыков, курсы развития
 115	courses	29	Наши курсы
 116	courses	30	Біздің курстар
 117	more	29	Подробнее
 118	more	30	Толығырақ‍
 119	task	31	Домашнее задание
+120	task	32	Тапсырма
 121	button	33	Оформить подписку на курс
 122	button	34	Подписаться
 123	program	33	Программа
@@ -2167,19 +2430,26 @@ COPY public.templates (id, label, template_module_id, title) FROM stdin;
 149	first	37	dasdadasdasd
 150	second	37	asdadsd
 151	third	37	qwdasdad
+152	first	38	asdad
+153	second	38	asdadad
+154	third	38	asdadsd
 155	title	37	Обратная связь
 156	title	38	Кері жауап
-152	first	38	Сабақ ұнады ма?
-154	third	38	Сабақ қиын болды ма әлде оңай болды ма?
-153	second	38	Сабақ қызықты өтті ме әлде қызықсыз болды ма?
-120	task	32	Үй тапсырмасы
-113	description	30	Кез келген пәннен ҰБТ-ға арзан бағада дайындала аласыз
-112	title	30	Қазақ тіліндегі ҰБТ-ға дайындық курстары
 \.
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: deploy
+-- Data for Name: user_choices; Type: TABLE DATA; Schema: public; Owner: yernazar
+--
+
+COPY public.user_choices (id, multiple_question_id, multiple_answer_id, user_id) FROM stdin;
+14	1	1	291
+15	2	4	291
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: yernazar
 --
 
 COPY public.users (id, email, encrypted_password, name_surname, phone, gender, reset_password_token, reset_password_sent_at, remember_created_at, created_at, updated_at, birthday, avatar, admin) FROM stdin;
@@ -2277,147 +2547,182 @@ COPY public.users (id, email, encrypted_password, name_surname, phone, gender, r
 
 
 --
--- Name: buys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: buys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.buys_id_seq', 334, true);
 
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.ckeditor_assets_id_seq', 1, false);
 
 
 --
--- Name: comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.comments_id_seq', 48, true);
 
 
 --
--- Name: course_faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: course_faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.course_faqs_id_seq', 73, true);
 
 
 --
--- Name: course_whos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: course_whos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.course_whos_id_seq', 27, true);
 
 
 --
--- Name: courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.courses_id_seq', 16, true);
 
 
 --
--- Name: courses_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: courses_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.courses_users_id_seq', 349, true);
 
 
 --
--- Name: faq_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: faq_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.faq_categories_id_seq', 2, true);
 
 
 --
--- Name: faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.faqs_id_seq', 4, true);
 
 
 --
--- Name: feedbacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: feedbacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.feedbacks_id_seq', 55, true);
 
 
 --
--- Name: hometasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: hometasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.hometasks_id_seq', 493, true);
 
 
 --
--- Name: languages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: languages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.languages_id_seq', 2, true);
 
 
 --
--- Name: lessons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: lessons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.lessons_id_seq', 90, true);
 
 
 --
--- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: multiple_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+--
+
+SELECT pg_catalog.setval('public.multiple_answers_id_seq', 6, true);
+
+
+--
+-- Name: multiple_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+--
+
+SELECT pg_catalog.setval('public.multiple_questions_id_seq', 2, true);
+
+
+--
+-- Name: multiple_results_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+--
+
+SELECT pg_catalog.setval('public.multiple_results_id_seq', 1, true);
+
+
+--
+-- Name: multiples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+--
+
+SELECT pg_catalog.setval('public.multiples_id_seq', 2, true);
+
+
+--
+-- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.news_id_seq', 3, true);
 
 
 --
--- Name: programs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: programs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.programs_id_seq', 6, true);
 
 
 --
--- Name: socials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: socials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.socials_id_seq', 4, true);
 
 
 --
--- Name: student_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: student_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.student_questions_id_seq', 76, true);
 
 
 --
--- Name: template_modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: template_modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.template_modules_id_seq', 38, true);
 
 
 --
--- Name: templates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: templates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.templates_id_seq', 159, true);
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+-- Name: user_choices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+--
+
+SELECT pg_catalog.setval('public.user_choices_id_seq', 15, true);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
 --
 
 SELECT pg_catalog.setval('public.users_id_seq', 373, true);
 
 
 --
--- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.ar_internal_metadata
@@ -2425,7 +2730,7 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 
 --
--- Name: buys buys_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: buys buys_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.buys
@@ -2433,7 +2738,7 @@ ALTER TABLE ONLY public.buys
 
 
 --
--- Name: ckeditor_assets ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: ckeditor_assets ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.ckeditor_assets
@@ -2441,7 +2746,7 @@ ALTER TABLE ONLY public.ckeditor_assets
 
 
 --
--- Name: comments comments_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: comments comments_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.comments
@@ -2449,7 +2754,7 @@ ALTER TABLE ONLY public.comments
 
 
 --
--- Name: course_faqs course_faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: course_faqs course_faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.course_faqs
@@ -2457,7 +2762,7 @@ ALTER TABLE ONLY public.course_faqs
 
 
 --
--- Name: course_whos course_whos_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: course_whos course_whos_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.course_whos
@@ -2465,7 +2770,7 @@ ALTER TABLE ONLY public.course_whos
 
 
 --
--- Name: courses courses_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: courses courses_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.courses
@@ -2473,7 +2778,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: courses_users courses_users_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: courses_users courses_users_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.courses_users
@@ -2481,7 +2786,7 @@ ALTER TABLE ONLY public.courses_users
 
 
 --
--- Name: faq_categories faq_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: faq_categories faq_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.faq_categories
@@ -2489,7 +2794,7 @@ ALTER TABLE ONLY public.faq_categories
 
 
 --
--- Name: faqs faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: faqs faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.faqs
@@ -2497,7 +2802,7 @@ ALTER TABLE ONLY public.faqs
 
 
 --
--- Name: feedbacks feedbacks_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: feedbacks feedbacks_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.feedbacks
@@ -2505,7 +2810,7 @@ ALTER TABLE ONLY public.feedbacks
 
 
 --
--- Name: hometasks hometasks_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: hometasks hometasks_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.hometasks
@@ -2513,7 +2818,7 @@ ALTER TABLE ONLY public.hometasks
 
 
 --
--- Name: languages languages_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: languages languages_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.languages
@@ -2521,7 +2826,7 @@ ALTER TABLE ONLY public.languages
 
 
 --
--- Name: lessons lessons_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: lessons lessons_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.lessons
@@ -2529,7 +2834,39 @@ ALTER TABLE ONLY public.lessons
 
 
 --
--- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: multiple_answers multiple_answers_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiple_answers
+    ADD CONSTRAINT multiple_answers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: multiple_questions multiple_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiple_questions
+    ADD CONSTRAINT multiple_questions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: multiple_results multiple_results_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiple_results
+    ADD CONSTRAINT multiple_results_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: multiples multiples_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.multiples
+    ADD CONSTRAINT multiples_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.news
@@ -2537,7 +2874,7 @@ ALTER TABLE ONLY public.news
 
 
 --
--- Name: programs programs_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: programs programs_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.programs
@@ -2545,7 +2882,7 @@ ALTER TABLE ONLY public.programs
 
 
 --
--- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.schema_migrations
@@ -2553,7 +2890,7 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
--- Name: socials socials_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: socials socials_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.socials
@@ -2561,7 +2898,7 @@ ALTER TABLE ONLY public.socials
 
 
 --
--- Name: student_questions student_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: student_questions student_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.student_questions
@@ -2569,7 +2906,7 @@ ALTER TABLE ONLY public.student_questions
 
 
 --
--- Name: template_modules template_modules_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: template_modules template_modules_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.template_modules
@@ -2577,7 +2914,7 @@ ALTER TABLE ONLY public.template_modules
 
 
 --
--- Name: templates templates_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: templates templates_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.templates
@@ -2585,7 +2922,15 @@ ALTER TABLE ONLY public.templates
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+-- Name: user_choices user_choices_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+--
+
+ALTER TABLE ONLY public.user_choices
+    ADD CONSTRAINT user_choices_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
 --
 
 ALTER TABLE ONLY public.users
@@ -2593,21 +2938,21 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: index_ckeditor_assets_on_type; Type: INDEX; Schema: public; Owner: deploy
+-- Name: index_ckeditor_assets_on_type; Type: INDEX; Schema: public; Owner: yernazar
 --
 
 CREATE INDEX index_ckeditor_assets_on_type ON public.ckeditor_assets USING btree (type);
 
 
 --
--- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: deploy
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: yernazar
 --
 
 CREATE UNIQUE INDEX index_users_on_email ON public.users USING btree (email);
 
 
 --
--- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: deploy
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: yernazar
 --
 
 CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING btree (reset_password_token);
