@@ -31,7 +31,7 @@ css:
   .header{
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 38px;
     left: 0;
     padding: 25px 0;
     z-index: 9999;
@@ -72,8 +72,10 @@ javascript:
   $(window).scroll(function(){
     if($(window).scrollTop() > 10){
       $('.header').addClass('active');
+      $('.header').css('top', 0);
     }
     else{
       $('.header').removeClass('active');
+        $('.header').css('top', '38px');
     }
   })
