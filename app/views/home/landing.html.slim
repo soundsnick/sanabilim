@@ -31,13 +31,14 @@
     .landing-courses
       .container
         h1.uk-card-title.landing-subtitle = text('landing', 'courses')
-        - @courses.each do |course|
-          .landing-course.uk-flex
-            .landing-course__image style="background-image: url(#{course.image.url})"
-            .landing-course__info
-              h4.landing-course__title = course.title
-              p.landing-course__paragraph = course.description
-              a.uk-button.uk-button-primary.circled href=course_path(course) = text('landing', 'more')
+        .conss style="grid-gap: 20px"
+          - @courses.each do |course|
+            .landing-course.uk-flex
+              .landing-course__image style="background-image: url(#{course.image.url});"
+              .landing-course__info
+                h4.landing-course__title = course.title
+                p.landing-course__paragraph = course.description
+                a.uk-button.uk-button-primary.circled href=course_path(course) = text('landing', 'more')
 footer.footer.uk-card.uk-card-default.uk-card-body style="box-shadow: none"
   .container
     .uk-flex
