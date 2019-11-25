@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2089535e-8ebb-4361-9aac-a8b7c5b4e2c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/landing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/landing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/landing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/landing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/landing.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/landing.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +213,8 @@
       <workItem from="1572541776910" duration="167000" />
       <workItem from="1572991934858" duration="7779000" />
       <workItem from="1573041657370" duration="169000" />
-      <workItem from="1573288166081" duration="655000" />
+      <workItem from="1573288166081" duration="1380000" />
+      <workItem from="1574669921051" duration="5404000" />
     </task>
     <servers />
   </component>

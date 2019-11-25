@@ -6,7 +6,27 @@
           h1.landing-title = text('landing', 'title')
           p.landing-description = text('landing', 'description')
           a.circled.uk-button.uk-button-primary href=courses_path = text('landing', 'more')
-        .uk-flex-1
+  .landing-cons
+    .container
+      h3.con-title = "4 ПРЕИМУЩЕСТВА ПОДГОТОВКИ НА КУРСАХ SANABILIM"
+      p.con-description = "по сравнению с занятиями на курсах при вузах и репетиторами"
+      .conss
+        - @adv.each do |con|
+          .adv
+            .adv__image style="background-image: url(#{con.image.url})"
+            .adv__info
+              span.adv__title = con.title
+              p.adv__description = con.description
+  .landing-conss
+    .container
+      h3.con-title = "Тек тәжірибелі мұғалімдер"
+      p.con-description = "Бізбен бірге сіз ҰБТ-ны өте жақсы тапсырасыз!"
+      .cons
+        - @cons.each do |con|
+          .con
+            img.con__icon src=con.icon
+            span.con__title = con.title
+            p.con__description = con.description
   .landing-content
     .landing-courses
       .container
@@ -27,32 +47,38 @@ footer.footer.uk-card.uk-card-default.uk-card-body style="box-shadow: none"
         - Social.all.each do |s|
           a href=s.link
             img.social src=s.icon.url
-css:
+scss:
   .header{
-    position: fixed;
     width: 100%;
     top: 38px;
     left: 0;
-    padding: 25px 0;
+    padding: 20px 0;
     z-index: 9999;
-    background: transparent;
+    background: #4045b5;
     transition: background 0.2s, padding 0.2s;
     border: none;
   }
-  .logo{
-    color: royalblue;
+  .logo, .logo b{
+    color: #fff;
   }
-  .logo b{
-    color: royalblue;
+  .nav__item{
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-weight: 400;
+    color: #fff!important;
+    transition: opacity 0.2s;
+    opacity: 1;
   }
   .nav__item, .nav__item.account{
-    color: #282828;
+    color: rgba(255,255,255,.8);
   }
   .nav__item:hover, .nav__item.account:hover{
-    color: royalblue;
+    color: rgba(255,255,255,1);
   }
   .header.active{
-    background: #fff;
+    position: fixed;
+    background: #4045b5;
     padding: 15px 0;
     box-shadow: 0 11px 8px -9px rgba(0,0,0,.05);
   }

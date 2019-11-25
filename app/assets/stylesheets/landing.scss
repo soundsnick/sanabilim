@@ -1,12 +1,25 @@
 .landing {
   &-header{
     padding: 150px 0;
-    background-image: image-url('landing.jpg');
+    background-image: linear-gradient(to top, rgba(0,0,0, 0.5), rgba(0,0,0, 0.6)), image-url('landing.jpg');
     background-size: cover;
     background-position: top center;
+    color: #fff;
+    text-align: center;
+    .landing-title{
+      color: #fff;
+      max-width: 462px;
+      margin: auto;
+      text-transform: uppercase;
+      font-size: 36px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
   }
   &-description{
-    font-weight: 200;
+    font-weight: 300;
+    opacity: .9;
+    font-size: 15px;
   }
   &-subtitle{
     font-size: 32px!important;
@@ -41,5 +54,97 @@
       color: #282828;
     }
   }
+  &-cons, &-conss{
+    padding: 100px 0;
+  }
+  &-conss{
+    background: #FFF;
+  }
 }
 
+.con{
+  text-align: center;
+  background: #f7f7f7;
+  box-shadow: 0 9px 11px -10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 40px 15px;
+  padding-bottom: 20px;
+  position: relative;
+  margin-top: 20px;
+  &__icon{
+    width: 70px;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  &__description{
+    margin-top: 4px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0 41px;
+  }
+  &__title{
+    color: #282828;
+    font-size: 15px;
+  }
+  &-description{
+    text-align: center;
+    margin-top: -15px;
+    font-weight: 300;
+  }
+  &-title{
+    color: #282828;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &:nth-child(2){
+    transform: scale(1.1);
+  }
+}
+.cons{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 50px;
+}
+.conss{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+}
+.adv{
+  display: flex;
+  flex-direction: column;
+  &:hover .adv__image{
+    background-size: 110%;
+  }
+  &__image{
+    padding-top: 56.25%;
+    background-size: 100%;
+    background-position: center;
+    transition: background-size 0.2s;
+  }
+  &__info{
+    padding: 30px;
+    color: #fff;
+    flex: 1;
+  }
+  &__title{
+    font-size: 22px;
+  }
+  &__description{
+    font-weight: 200;
+    font-size: 14px;
+  }
+  &:nth-child(1) .adv__info{
+    background: #6b7de0;
+  }
+  &:nth-child(2) .adv__info{
+    background: #6849b6;
+  }
+  &:nth-child(3) .adv__info{
+    background: #e84c60;
+  }
+  &:nth-child(4) .adv__info{
+    background: #9766c7;
+  }
+}

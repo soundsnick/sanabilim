@@ -17,6 +17,8 @@ class HomeController < ApplicationController
 
   def landing
     @title = text('landing', 'title')
+    @cons = Con.all
+    @adv = Advantage.all
     @courses = get_language.courses.all
   end
 end
