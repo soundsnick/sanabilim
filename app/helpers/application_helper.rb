@@ -1,6 +1,6 @@
 module ApplicationHelper
   def get_language
-    cookies[:language].split('-')[0] == nil ? Language.find_by(abbr: 'kk') : Language.find_by(abbr: cookies[:language].split('-')[0])
+    cookies[:language] == nil ? Language.find_by(abbr: 'kk') : Language.find_by(abbr: cookies[:language].split('-')[0])
   end
 
   def text(mod, label)
