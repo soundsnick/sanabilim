@@ -35,7 +35,44 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: advantages; Type: TABLE; Schema: public; Owner: deploy
+--
+
+CREATE TABLE public.advantages (
+    id bigint NOT NULL,
+    image character varying,
+    title character varying,
+    description text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.advantages OWNER TO deploy;
+
+--
+-- Name: advantages_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+--
+
+CREATE SEQUENCE public.advantages_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.advantages_id_seq OWNER TO deploy;
+
+--
+-- Name: advantages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+--
+
+ALTER SEQUENCE public.advantages_id_seq OWNED BY public.advantages.id;
+
+
+--
+-- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.ar_internal_metadata (
@@ -46,10 +83,10 @@ CREATE TABLE public.ar_internal_metadata (
 );
 
 
-ALTER TABLE public.ar_internal_metadata OWNER TO yernazar;
+ALTER TABLE public.ar_internal_metadata OWNER TO deploy;
 
 --
--- Name: buys; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: buys; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.buys (
@@ -62,10 +99,10 @@ CREATE TABLE public.buys (
 );
 
 
-ALTER TABLE public.buys OWNER TO yernazar;
+ALTER TABLE public.buys OWNER TO deploy;
 
 --
--- Name: buys_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: buys_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.buys_id_seq
@@ -76,17 +113,17 @@ CREATE SEQUENCE public.buys_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.buys_id_seq OWNER TO yernazar;
+ALTER TABLE public.buys_id_seq OWNER TO deploy;
 
 --
--- Name: buys_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: buys_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.buys_id_seq OWNED BY public.buys.id;
 
 
 --
--- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.ckeditor_assets (
@@ -100,10 +137,10 @@ CREATE TABLE public.ckeditor_assets (
 );
 
 
-ALTER TABLE public.ckeditor_assets OWNER TO yernazar;
+ALTER TABLE public.ckeditor_assets OWNER TO deploy;
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.ckeditor_assets_id_seq
@@ -114,17 +151,17 @@ CREATE SEQUENCE public.ckeditor_assets_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.ckeditor_assets_id_seq OWNER TO yernazar;
+ALTER TABLE public.ckeditor_assets_id_seq OWNER TO deploy;
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.ckeditor_assets_id_seq OWNED BY public.ckeditor_assets.id;
 
 
 --
--- Name: comments; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: comments; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.comments (
@@ -137,10 +174,10 @@ CREATE TABLE public.comments (
 );
 
 
-ALTER TABLE public.comments OWNER TO yernazar;
+ALTER TABLE public.comments OWNER TO deploy;
 
 --
--- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.comments_id_seq
@@ -151,17 +188,54 @@ CREATE SEQUENCE public.comments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.comments_id_seq OWNER TO yernazar;
+ALTER TABLE public.comments_id_seq OWNER TO deploy;
 
 --
--- Name: comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.comments_id_seq OWNED BY public.comments.id;
 
 
 --
--- Name: course_faqs; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: cons; Type: TABLE; Schema: public; Owner: deploy
+--
+
+CREATE TABLE public.cons (
+    id bigint NOT NULL,
+    title character varying,
+    description text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    icon character varying
+);
+
+
+ALTER TABLE public.cons OWNER TO deploy;
+
+--
+-- Name: cons_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+--
+
+CREATE SEQUENCE public.cons_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.cons_id_seq OWNER TO deploy;
+
+--
+-- Name: cons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+--
+
+ALTER SEQUENCE public.cons_id_seq OWNED BY public.cons.id;
+
+
+--
+-- Name: course_faqs; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.course_faqs (
@@ -172,10 +246,10 @@ CREATE TABLE public.course_faqs (
 );
 
 
-ALTER TABLE public.course_faqs OWNER TO yernazar;
+ALTER TABLE public.course_faqs OWNER TO deploy;
 
 --
--- Name: course_faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: course_faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.course_faqs_id_seq
@@ -186,17 +260,17 @@ CREATE SEQUENCE public.course_faqs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.course_faqs_id_seq OWNER TO yernazar;
+ALTER TABLE public.course_faqs_id_seq OWNER TO deploy;
 
 --
--- Name: course_faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: course_faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.course_faqs_id_seq OWNED BY public.course_faqs.id;
 
 
 --
--- Name: course_whos; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: course_whos; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.course_whos (
@@ -208,10 +282,10 @@ CREATE TABLE public.course_whos (
 );
 
 
-ALTER TABLE public.course_whos OWNER TO yernazar;
+ALTER TABLE public.course_whos OWNER TO deploy;
 
 --
--- Name: course_whos_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: course_whos_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.course_whos_id_seq
@@ -222,17 +296,17 @@ CREATE SEQUENCE public.course_whos_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.course_whos_id_seq OWNER TO yernazar;
+ALTER TABLE public.course_whos_id_seq OWNER TO deploy;
 
 --
--- Name: course_whos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: course_whos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.course_whos_id_seq OWNED BY public.course_whos.id;
 
 
 --
--- Name: courses; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: courses; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.courses (
@@ -253,10 +327,10 @@ CREATE TABLE public.courses (
 );
 
 
-ALTER TABLE public.courses OWNER TO yernazar;
+ALTER TABLE public.courses OWNER TO deploy;
 
 --
--- Name: courses_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: courses_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.courses_id_seq
@@ -267,17 +341,17 @@ CREATE SEQUENCE public.courses_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.courses_id_seq OWNER TO yernazar;
+ALTER TABLE public.courses_id_seq OWNER TO deploy;
 
 --
--- Name: courses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: courses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.courses_id_seq OWNED BY public.courses.id;
 
 
 --
--- Name: courses_users; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: courses_users; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.courses_users (
@@ -287,10 +361,10 @@ CREATE TABLE public.courses_users (
 );
 
 
-ALTER TABLE public.courses_users OWNER TO yernazar;
+ALTER TABLE public.courses_users OWNER TO deploy;
 
 --
--- Name: courses_users_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: courses_users_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.courses_users_id_seq
@@ -301,17 +375,17 @@ CREATE SEQUENCE public.courses_users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.courses_users_id_seq OWNER TO yernazar;
+ALTER TABLE public.courses_users_id_seq OWNER TO deploy;
 
 --
--- Name: courses_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: courses_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.courses_users_id_seq OWNED BY public.courses_users.id;
 
 
 --
--- Name: faq_categories; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: faq_categories; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.faq_categories (
@@ -321,10 +395,10 @@ CREATE TABLE public.faq_categories (
 );
 
 
-ALTER TABLE public.faq_categories OWNER TO yernazar;
+ALTER TABLE public.faq_categories OWNER TO deploy;
 
 --
--- Name: faq_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: faq_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.faq_categories_id_seq
@@ -335,17 +409,17 @@ CREATE SEQUENCE public.faq_categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.faq_categories_id_seq OWNER TO yernazar;
+ALTER TABLE public.faq_categories_id_seq OWNER TO deploy;
 
 --
--- Name: faq_categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: faq_categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.faq_categories_id_seq OWNED BY public.faq_categories.id;
 
 
 --
--- Name: faqs; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: faqs; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.faqs (
@@ -356,10 +430,10 @@ CREATE TABLE public.faqs (
 );
 
 
-ALTER TABLE public.faqs OWNER TO yernazar;
+ALTER TABLE public.faqs OWNER TO deploy;
 
 --
--- Name: faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.faqs_id_seq
@@ -370,17 +444,17 @@ CREATE SEQUENCE public.faqs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.faqs_id_seq OWNER TO yernazar;
+ALTER TABLE public.faqs_id_seq OWNER TO deploy;
 
 --
--- Name: faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.faqs_id_seq OWNED BY public.faqs.id;
 
 
 --
--- Name: feedbacks; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: feedbacks; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.feedbacks (
@@ -395,10 +469,10 @@ CREATE TABLE public.feedbacks (
 );
 
 
-ALTER TABLE public.feedbacks OWNER TO yernazar;
+ALTER TABLE public.feedbacks OWNER TO deploy;
 
 --
--- Name: feedbacks_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: feedbacks_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.feedbacks_id_seq
@@ -409,17 +483,17 @@ CREATE SEQUENCE public.feedbacks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.feedbacks_id_seq OWNER TO yernazar;
+ALTER TABLE public.feedbacks_id_seq OWNER TO deploy;
 
 --
--- Name: feedbacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: feedbacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.feedbacks_id_seq OWNED BY public.feedbacks.id;
 
 
 --
--- Name: hometasks; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: hometasks; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.hometasks (
@@ -434,10 +508,10 @@ CREATE TABLE public.hometasks (
 );
 
 
-ALTER TABLE public.hometasks OWNER TO yernazar;
+ALTER TABLE public.hometasks OWNER TO deploy;
 
 --
--- Name: hometasks_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: hometasks_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.hometasks_id_seq
@@ -448,17 +522,17 @@ CREATE SEQUENCE public.hometasks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.hometasks_id_seq OWNER TO yernazar;
+ALTER TABLE public.hometasks_id_seq OWNER TO deploy;
 
 --
--- Name: hometasks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: hometasks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.hometasks_id_seq OWNED BY public.hometasks.id;
 
 
 --
--- Name: languages; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: languages; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.languages (
@@ -468,10 +542,10 @@ CREATE TABLE public.languages (
 );
 
 
-ALTER TABLE public.languages OWNER TO yernazar;
+ALTER TABLE public.languages OWNER TO deploy;
 
 --
--- Name: languages_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: languages_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.languages_id_seq
@@ -482,17 +556,17 @@ CREATE SEQUENCE public.languages_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.languages_id_seq OWNER TO yernazar;
+ALTER TABLE public.languages_id_seq OWNER TO deploy;
 
 --
--- Name: languages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: languages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.languages_id_seq OWNED BY public.languages.id;
 
 
 --
--- Name: lessons; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: lessons; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.lessons (
@@ -510,10 +584,10 @@ CREATE TABLE public.lessons (
 );
 
 
-ALTER TABLE public.lessons OWNER TO yernazar;
+ALTER TABLE public.lessons OWNER TO deploy;
 
 --
--- Name: lessons_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: lessons_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.lessons_id_seq
@@ -524,17 +598,17 @@ CREATE SEQUENCE public.lessons_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.lessons_id_seq OWNER TO yernazar;
+ALTER TABLE public.lessons_id_seq OWNER TO deploy;
 
 --
--- Name: lessons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: lessons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.lessons_id_seq OWNED BY public.lessons.id;
 
 
 --
--- Name: multiple_answers; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: multiple_answers; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.multiple_answers (
@@ -545,10 +619,10 @@ CREATE TABLE public.multiple_answers (
 );
 
 
-ALTER TABLE public.multiple_answers OWNER TO yernazar;
+ALTER TABLE public.multiple_answers OWNER TO deploy;
 
 --
--- Name: multiple_answers_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: multiple_answers_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.multiple_answers_id_seq
@@ -559,17 +633,17 @@ CREATE SEQUENCE public.multiple_answers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.multiple_answers_id_seq OWNER TO yernazar;
+ALTER TABLE public.multiple_answers_id_seq OWNER TO deploy;
 
 --
--- Name: multiple_answers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: multiple_answers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.multiple_answers_id_seq OWNED BY public.multiple_answers.id;
 
 
 --
--- Name: multiple_questions; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: multiple_questions; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.multiple_questions (
@@ -579,10 +653,10 @@ CREATE TABLE public.multiple_questions (
 );
 
 
-ALTER TABLE public.multiple_questions OWNER TO yernazar;
+ALTER TABLE public.multiple_questions OWNER TO deploy;
 
 --
--- Name: multiple_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: multiple_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.multiple_questions_id_seq
@@ -593,17 +667,17 @@ CREATE SEQUENCE public.multiple_questions_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.multiple_questions_id_seq OWNER TO yernazar;
+ALTER TABLE public.multiple_questions_id_seq OWNER TO deploy;
 
 --
--- Name: multiple_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: multiple_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.multiple_questions_id_seq OWNED BY public.multiple_questions.id;
 
 
 --
--- Name: multiple_results; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: multiple_results; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.multiple_results (
@@ -616,10 +690,10 @@ CREATE TABLE public.multiple_results (
 );
 
 
-ALTER TABLE public.multiple_results OWNER TO yernazar;
+ALTER TABLE public.multiple_results OWNER TO deploy;
 
 --
--- Name: multiple_results_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: multiple_results_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.multiple_results_id_seq
@@ -630,17 +704,17 @@ CREATE SEQUENCE public.multiple_results_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.multiple_results_id_seq OWNER TO yernazar;
+ALTER TABLE public.multiple_results_id_seq OWNER TO deploy;
 
 --
--- Name: multiple_results_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: multiple_results_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.multiple_results_id_seq OWNED BY public.multiple_results.id;
 
 
 --
--- Name: multiples; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: multiples; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.multiples (
@@ -653,10 +727,10 @@ CREATE TABLE public.multiples (
 );
 
 
-ALTER TABLE public.multiples OWNER TO yernazar;
+ALTER TABLE public.multiples OWNER TO deploy;
 
 --
--- Name: multiples_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: multiples_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.multiples_id_seq
@@ -667,17 +741,17 @@ CREATE SEQUENCE public.multiples_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.multiples_id_seq OWNER TO yernazar;
+ALTER TABLE public.multiples_id_seq OWNER TO deploy;
 
 --
--- Name: multiples_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: multiples_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.multiples_id_seq OWNED BY public.multiples.id;
 
 
 --
--- Name: news; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: news; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.news (
@@ -694,10 +768,10 @@ CREATE TABLE public.news (
 );
 
 
-ALTER TABLE public.news OWNER TO yernazar;
+ALTER TABLE public.news OWNER TO deploy;
 
 --
--- Name: news_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: news_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.news_id_seq
@@ -708,17 +782,17 @@ CREATE SEQUENCE public.news_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.news_id_seq OWNER TO yernazar;
+ALTER TABLE public.news_id_seq OWNER TO deploy;
 
 --
--- Name: news_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: news_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.news_id_seq OWNED BY public.news.id;
 
 
 --
--- Name: programs; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: programs; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.programs (
@@ -729,10 +803,10 @@ CREATE TABLE public.programs (
 );
 
 
-ALTER TABLE public.programs OWNER TO yernazar;
+ALTER TABLE public.programs OWNER TO deploy;
 
 --
--- Name: programs_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: programs_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.programs_id_seq
@@ -743,17 +817,17 @@ CREATE SEQUENCE public.programs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.programs_id_seq OWNER TO yernazar;
+ALTER TABLE public.programs_id_seq OWNER TO deploy;
 
 --
--- Name: programs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: programs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.programs_id_seq OWNED BY public.programs.id;
 
 
 --
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.schema_migrations (
@@ -761,10 +835,10 @@ CREATE TABLE public.schema_migrations (
 );
 
 
-ALTER TABLE public.schema_migrations OWNER TO yernazar;
+ALTER TABLE public.schema_migrations OWNER TO deploy;
 
 --
--- Name: socials; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: socials; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.socials (
@@ -775,10 +849,10 @@ CREATE TABLE public.socials (
 );
 
 
-ALTER TABLE public.socials OWNER TO yernazar;
+ALTER TABLE public.socials OWNER TO deploy;
 
 --
--- Name: socials_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: socials_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.socials_id_seq
@@ -789,17 +863,17 @@ CREATE SEQUENCE public.socials_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.socials_id_seq OWNER TO yernazar;
+ALTER TABLE public.socials_id_seq OWNER TO deploy;
 
 --
--- Name: socials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: socials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.socials_id_seq OWNED BY public.socials.id;
 
 
 --
--- Name: student_questions; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: student_questions; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.student_questions (
@@ -813,10 +887,10 @@ CREATE TABLE public.student_questions (
 );
 
 
-ALTER TABLE public.student_questions OWNER TO yernazar;
+ALTER TABLE public.student_questions OWNER TO deploy;
 
 --
--- Name: student_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: student_questions_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.student_questions_id_seq
@@ -827,17 +901,17 @@ CREATE SEQUENCE public.student_questions_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.student_questions_id_seq OWNER TO yernazar;
+ALTER TABLE public.student_questions_id_seq OWNER TO deploy;
 
 --
--- Name: student_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: student_questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.student_questions_id_seq OWNED BY public.student_questions.id;
 
 
 --
--- Name: template_modules; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: template_modules; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.template_modules (
@@ -848,10 +922,10 @@ CREATE TABLE public.template_modules (
 );
 
 
-ALTER TABLE public.template_modules OWNER TO yernazar;
+ALTER TABLE public.template_modules OWNER TO deploy;
 
 --
--- Name: template_modules_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: template_modules_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.template_modules_id_seq
@@ -862,17 +936,17 @@ CREATE SEQUENCE public.template_modules_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.template_modules_id_seq OWNER TO yernazar;
+ALTER TABLE public.template_modules_id_seq OWNER TO deploy;
 
 --
--- Name: template_modules_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: template_modules_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.template_modules_id_seq OWNED BY public.template_modules.id;
 
 
 --
--- Name: templates; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: templates; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.templates (
@@ -883,10 +957,10 @@ CREATE TABLE public.templates (
 );
 
 
-ALTER TABLE public.templates OWNER TO yernazar;
+ALTER TABLE public.templates OWNER TO deploy;
 
 --
--- Name: templates_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: templates_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.templates_id_seq
@@ -897,17 +971,17 @@ CREATE SEQUENCE public.templates_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.templates_id_seq OWNER TO yernazar;
+ALTER TABLE public.templates_id_seq OWNER TO deploy;
 
 --
--- Name: templates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: templates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.templates_id_seq OWNED BY public.templates.id;
 
 
 --
--- Name: user_choices; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: user_choices; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.user_choices (
@@ -918,10 +992,10 @@ CREATE TABLE public.user_choices (
 );
 
 
-ALTER TABLE public.user_choices OWNER TO yernazar;
+ALTER TABLE public.user_choices OWNER TO deploy;
 
 --
--- Name: user_choices_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: user_choices_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.user_choices_id_seq
@@ -932,17 +1006,17 @@ CREATE SEQUENCE public.user_choices_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.user_choices_id_seq OWNER TO yernazar;
+ALTER TABLE public.user_choices_id_seq OWNER TO deploy;
 
 --
--- Name: user_choices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: user_choices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.user_choices_id_seq OWNED BY public.user_choices.id;
 
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: yernazar
+-- Name: users; Type: TABLE; Schema: public; Owner: deploy
 --
 
 CREATE TABLE public.users (
@@ -963,10 +1037,10 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO yernazar;
+ALTER TABLE public.users OWNER TO deploy;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: yernazar
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -977,201 +1051,227 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO yernazar;
+ALTER TABLE public.users_id_seq OWNER TO deploy;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: yernazar
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: buys id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: advantages id; Type: DEFAULT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.advantages ALTER COLUMN id SET DEFAULT nextval('public.advantages_id_seq'::regclass);
+
+
+--
+-- Name: buys id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.buys ALTER COLUMN id SET DEFAULT nextval('public.buys_id_seq'::regclass);
 
 
 --
--- Name: ckeditor_assets id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: ckeditor_assets id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.ckeditor_assets ALTER COLUMN id SET DEFAULT nextval('public.ckeditor_assets_id_seq'::regclass);
 
 
 --
--- Name: comments id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: comments id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.comments ALTER COLUMN id SET DEFAULT nextval('public.comments_id_seq'::regclass);
 
 
 --
--- Name: course_faqs id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: cons id; Type: DEFAULT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.cons ALTER COLUMN id SET DEFAULT nextval('public.cons_id_seq'::regclass);
+
+
+--
+-- Name: course_faqs id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.course_faqs ALTER COLUMN id SET DEFAULT nextval('public.course_faqs_id_seq'::regclass);
 
 
 --
--- Name: course_whos id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: course_whos id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.course_whos ALTER COLUMN id SET DEFAULT nextval('public.course_whos_id_seq'::regclass);
 
 
 --
--- Name: courses id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: courses id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.courses ALTER COLUMN id SET DEFAULT nextval('public.courses_id_seq'::regclass);
 
 
 --
--- Name: courses_users id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: courses_users id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.courses_users ALTER COLUMN id SET DEFAULT nextval('public.courses_users_id_seq'::regclass);
 
 
 --
--- Name: faq_categories id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: faq_categories id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.faq_categories ALTER COLUMN id SET DEFAULT nextval('public.faq_categories_id_seq'::regclass);
 
 
 --
--- Name: faqs id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: faqs id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.faqs ALTER COLUMN id SET DEFAULT nextval('public.faqs_id_seq'::regclass);
 
 
 --
--- Name: feedbacks id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: feedbacks id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.feedbacks ALTER COLUMN id SET DEFAULT nextval('public.feedbacks_id_seq'::regclass);
 
 
 --
--- Name: hometasks id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: hometasks id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.hometasks ALTER COLUMN id SET DEFAULT nextval('public.hometasks_id_seq'::regclass);
 
 
 --
--- Name: languages id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: languages id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.languages ALTER COLUMN id SET DEFAULT nextval('public.languages_id_seq'::regclass);
 
 
 --
--- Name: lessons id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: lessons id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.lessons ALTER COLUMN id SET DEFAULT nextval('public.lessons_id_seq'::regclass);
 
 
 --
--- Name: multiple_answers id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: multiple_answers id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiple_answers ALTER COLUMN id SET DEFAULT nextval('public.multiple_answers_id_seq'::regclass);
 
 
 --
--- Name: multiple_questions id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: multiple_questions id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiple_questions ALTER COLUMN id SET DEFAULT nextval('public.multiple_questions_id_seq'::regclass);
 
 
 --
--- Name: multiple_results id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: multiple_results id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiple_results ALTER COLUMN id SET DEFAULT nextval('public.multiple_results_id_seq'::regclass);
 
 
 --
--- Name: multiples id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: multiples id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiples ALTER COLUMN id SET DEFAULT nextval('public.multiples_id_seq'::regclass);
 
 
 --
--- Name: news id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: news id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.news ALTER COLUMN id SET DEFAULT nextval('public.news_id_seq'::regclass);
 
 
 --
--- Name: programs id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: programs id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.programs ALTER COLUMN id SET DEFAULT nextval('public.programs_id_seq'::regclass);
 
 
 --
--- Name: socials id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: socials id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.socials ALTER COLUMN id SET DEFAULT nextval('public.socials_id_seq'::regclass);
 
 
 --
--- Name: student_questions id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: student_questions id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.student_questions ALTER COLUMN id SET DEFAULT nextval('public.student_questions_id_seq'::regclass);
 
 
 --
--- Name: template_modules id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: template_modules id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.template_modules ALTER COLUMN id SET DEFAULT nextval('public.template_modules_id_seq'::regclass);
 
 
 --
--- Name: templates id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: templates id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.templates ALTER COLUMN id SET DEFAULT nextval('public.templates_id_seq'::regclass);
 
 
 --
--- Name: user_choices id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: user_choices id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.user_choices ALTER COLUMN id SET DEFAULT nextval('public.user_choices_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: yernazar
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: advantages; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
-COPY public.ar_internal_metadata (key, value, created_at, updated_at) FROM stdin;
-environment	development	2019-08-25 17:02:05.434611	2019-08-25 17:02:05.434611
+COPY public.advantages (id, image, title, description, created_at, updated_at) FROM stdin;
+3	Entrepreneurial-Time-Roadblock_Multiplier-Mindset-Blog.png	ЗАНИМАЙСЯ КОГДА УДОБНО	Ты сам выбираешь заниматься 2 или 3 раза в неделю, а также день и время занятий\r\n\r\n	2019-11-25 09:40:26.446709	2019-11-25 14:29:32.624882
+1	motivation.png	МОТИВАЦИЯ	Мы хотим чтобы каждый наш ученик освоил свой предмет,и поэтому у нас в конце курса будет проходить тест,кто наберет больше остальных баллы тот и получает свой IPHONE 11.Круто,не правда ли?)\r\n\r\n	2019-11-25 09:39:53.701902	2019-11-25 14:42:01.085098
+2	testt.jpg	БУДЬ ГОТОВ К РЕАЛЬНОМУ ЕНТ!	Каждый месяц мы сдаём ЕНТ на нашем сайте  с ограничением по времени   \r\n\r\n	2019-11-25 09:40:11.486379	2019-11-25 14:43:39.912118
+5	lider.jpg	ОТ НАЧАЛО ДО КОНЦА 	В период курсов вы сможете задать нам любой вопрос который вас заинтересуют по поводу ЕНТ.	2019-11-25 15:47:47.386402	2019-11-25 15:47:47.386402
 \.
 
 
 --
--- Data for Name: buys; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: deploy
+--
+
+COPY public.ar_internal_metadata (key, value, created_at, updated_at) FROM stdin;
+environment	production	2019-08-25 17:02:05.434611	2019-11-09 08:32:30.444556
+\.
+
+
+--
+-- Data for Name: buys; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.buys (id, name, phone, course_id, created_at, updated_at) FROM stdin;
@@ -1509,11 +1609,12 @@ COPY public.buys (id, name, phone, course_id, created_at, updated_at) FROM stdin
 332	Айсұлу	87711434868	12	2019-10-22 01:57:18.642092	2019-10-22 01:57:18.642092
 333	Айсұлу Мамырова	87751939441	12	2019-10-22 02:01:51.763701	2019-10-22 02:01:51.763701
 334	Айсұлу Мамырова	87751939441	14	2019-10-22 02:02:23.300567	2019-10-22 02:02:23.300567
+335	ayat	87079099077	12	2019-12-14 09:46:20.123516	2019-12-14 09:46:20.123516
 \.
 
 
 --
--- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.ckeditor_assets (id, data_file_name, data_content_type, data_file_size, type, created_at, updated_at) FROM stdin;
@@ -1521,7 +1622,7 @@ COPY public.ckeditor_assets (id, data_file_name, data_content_type, data_file_si
 
 
 --
--- Data for Name: comments; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: comments; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.comments (id, user_id, lesson_id, text, created_at, updated_at) FROM stdin;
@@ -1564,7 +1665,16 @@ COPY public.comments (id, user_id, lesson_id, text, created_at, updated_at) FROM
 
 
 --
--- Data for Name: course_faqs; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: cons; Type: TABLE DATA; Schema: public; Owner: deploy
+--
+
+COPY public.cons (id, title, description, created_at, updated_at, icon) FROM stdin;
+3	ЕНТ	Подготовка к ЕНТ по всем предметам\r\n\r\n	2019-11-25 09:02:25.220038	2019-11-25 11:52:02.476902	http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/light-bulb-icon.png
+\.
+
+
+--
+-- Data for Name: course_faqs; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.course_faqs (id, title, answer, course_id) FROM stdin;
@@ -1642,56 +1752,57 @@ COPY public.course_faqs (id, title, answer, course_id) FROM stdin;
 
 
 --
--- Data for Name: course_whos; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: course_whos; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.course_whos (id, icon, title, description, course_id) FROM stdin;
-6	oooo.plus_163.png	Математика пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар есептер шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	12
-1	YouTube-icon.png	Ютубқа жиі кіретін болсаңыз	Егер ютубқа жиі кіретін болсаңыз, осы курстан соң аз кіресіз	\N
-2	oooo.plus_163.png	Математикалық сауаттылықтан 20 ұпай керек болса!	Біздің курста барлық тақырыптарды үйренумен қатар есептер шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 20 ұпай алатыныңызға кепілдік береміз.	13
-9	oooo.plus_163.png	Химия пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар сұрақтар шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	9
-5	oooo.plus_163.png	Қазақстан тарихынан 20 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар сұрақтар шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 20 ұпай алатыныңызға кепілдік береміз.	14
-12	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе (Математикалық сауаттылық | ҰБТ)	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.(Математикалық сауаттылық | ҰБТ)	13
-13	oooo.plus_33.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе(Математикалық сауаттылық | ҰБТ)	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.(Математикалық сауаттылық | ҰБТ)	13
-4	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	\N
-15	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	11
-8	oooo.plus_163.png	Биология пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар сұрақтар шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	10
-16	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	10
+8	oooo.plus_163.png	Биология пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар сұрақтар шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	\N
+20	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	\N
+19	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	\N
+7	oooo.plus_163.png	Физика пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар есептер шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	\N
+10	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе (Қазақстан тарихы | ҰБТ)	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.(Қазақстан тарихы | ҰБТ)	\N
 3	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	\N
-14	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	12
-10	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе (Қазақстан тарихы | ҰБТ)	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.(Қазақстан тарихы | ҰБТ)	14
-7	oooo.plus_163.png	Физика пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар есептер шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	11
-11	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе(Қазақстан тарихы | ҰБТ)	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.(Қазақстан тарихы | ҰБТ)	14
-17	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	9
-18	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	12
-19	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	11
-20	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	10
-21	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	9
-22	\N	Өз дәрежеңізді білгіңіз келсе	Тестілеу арқылы дәрежеңізді анықтай аласыз	15
-23	\N	Талдау арқылы тақырыптарды үйреніп алыңыз	Талдау арқылы жаңа тақырыптарды үйреніп алыңыз	15
+16	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	\N
+15	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	\N
+13	oooo.plus_33.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе(Математикалық сауаттылық | ҰБТ)	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.(Математикалық сауаттылық | ҰБТ)	\N
+12	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе (Математикалық сауаттылық | ҰБТ)	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.(Математикалық сауаттылық | ҰБТ)	\N
+9	oooo.plus_163.png	Химия пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар сұрақтар шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	\N
+27	oooo.plus_28.png	Тәжірбиесі барлардан сұрағыңыз келсе	Біздің курста тәжірибелі мұғалімдерге сұрақ қоюға болады	\N
+26	oooo.plus_33.png	Уақыт аз болса	Аз уақыттың ішінде ҰБТ-ға дайындалып шыққыңыз келсе!	\N
+25	oooo.plus_163.png	ҰБТ-дан жоғары ұпай жинағыңыз келсе	Біздің құпия әдісіміздің арқасында жоғары ұпайды оп-оңай жинап аласыз	\N
 24	blackboard-chalkboard-communication-355988.jpg	fdfd	fdfd	\N
-25	oooo.plus_163.png	ҰБТ-дан жоғары ұпай жинағыңыз келсе	Біздің құпия әдісіміздің арқасында жоғары ұпайды оп-оңай жинап аласыз	16
-26	oooo.plus_33.png	Уақыт аз болса	Аз уақыттың ішінде ҰБТ-ға дайындалып шыққыңыз келсе!	16
-27	oooo.plus_28.png	Тәжірбиесі барлардан сұрағыңыз келсе	Біздің курста тәжірибелі мұғалімдерге сұрақ қоюға болады	16
+23	\N	Талдау арқылы тақырыптарды үйреніп алыңыз	Талдау арқылы жаңа тақырыптарды үйреніп алыңыз	\N
+22	\N	Өз дәрежеңізді білгіңіз келсе	Тестілеу арқылы дәрежеңізді анықтай аласыз	\N
+21	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	\N
+18	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	\N
+17	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	\N
+14	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.	\N
+11	oooo.plus_33.png	Сабақты қалаған уақытта қайталап көргіңіз келсе(Қазақстан тарихы | ҰБТ)	Сабақтар видео форматта сақталып тұрады. Қай уақытта, қанша рет қайталап көрсеңіз де өз еркіңіз.(Қазақстан тарихы | ҰБТ)	\N
+6	oooo.plus_163.png	Математика пәнінен 40 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар есептер шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 40 ұпай алатыныңызға кепілдік береміз.	\N
+5	oooo.plus_163.png	Қазақстан тарихынан 20 ұпай керек болса	Біздің курста барлық тақырыптарды үйренумен қатар сұрақтар шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 20 ұпай алатыныңызға кепілдік береміз.	\N
+4	oooo.plus_28.png	Сұрақтар туындаса мұғалімнен жауап алғыңыз келсе	Курс барысында мұғаліміңізге сұрақ қоя аласыз. Бізде әр сабақтың астында "түсінбеген жерлеріңіз болса осында жаза аласыз" деген жер бар. Сол жерге кез келген зат жазсаңыз, мұғалім жауап береді.	\N
+2	oooo.plus_163.png	Математикалық сауаттылықтан 20 ұпай керек болса!	Біздің курста барлық тақырыптарды үйренумен қатар есептер шығарып, тестілеу барысында практика жасайсыз. Біздің курсымызды толықтай өтіп шықсаңыз 20 ұпай алатыныңызға кепілдік береміз.	\N
+1	YouTube-icon.png	Ютубқа жиі кіретін болсаңыз	Егер ютубқа жиі кіретін болсаңыз, осы курстан соң аз кіресіз	\N
+28	whats_marathon.png	Курс кімдер үшін арналған?	1.ҰБТ-ға дайындалып жүрген түлектерге\r\n2.Сапалы білім ізденушілерге\r\n3.Маман жетіспейтін алыс мекен тұрғындарға\r\n4.Уақыттың қадірін білетіндерге	11
 \.
 
 
 --
--- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.courses (id, title, image, description, created_at, updated_at, color, language_id, landing_header_title, landing_header_paragraph, landing_about_title, landing_about_paragraph, landing_program_description, price) FROM stdin;
-11	Физика | ҰБТ	physacs.jpg	Физика пәнінен ҰБТ-ға дайындық	2019-07-17 16:49:40.298514	2019-08-07 23:22:36.437812	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Физика курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы айына <strong>10000</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20000тг болады</tt></strong></p>\r\n
-13	Математикалық сауаттылық | ҰБТ	mathupmind.jpg	Математикалық сауаттылықтан ҰБТ-ға дайындық.	2019-07-17 16:51:37.319301	2019-08-07 23:23:19.674549	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Математикалық сауаттылық курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 18-20 ұпай алатын дәрежеге 1 айда жетеді.	Сабақтар күн сайын өтеді. Яғни 30 күнде толық 30 сабақ болады.	<h3><strong><tt>Толық курс бағасы 10000тг болады</tt></strong></h3>\r\n
-12	Математика | ҰБТ	mathematupmind.jpg	Математика пәнінен ҰБТ-ға дайындық	2019-07-17 16:50:17.643929	2019-08-07 23:22:24.163973	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Математика курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы айына <strong>10000</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20000тг болады</tt></strong></p>\r\n
-9	Химия | ҰБТ	chement.jpg	Химия пәнінен ҰБТ-ға дайындық	2019-07-17 16:40:14.16732	2019-08-07 23:22:58.443044	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Химия курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді. Сізге курс барысында бір приложение беріледі, ол приложение кез келген құрылғымен жұмыс жасайды.  Ол приложение арқылы ойын форматында тарих сұрақтарын жаттап отырасыз. Сізге курс барысында бір приложение беріледі, ол приложение кез келген құрылғымен жұмыс жасайды. Ол приложение арқылы ойын форматында тарих сұрақтарын жаттап отырасыз.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады. Бірінші айда жалпы химия және бейорганикалық химия өтеміз. Екінші айда органикалық химияны өтеміз.	<h3><tt>Бағасы айына <strong>10000</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20000тг болады</tt></strong></p>\r\n
-14	Қазақстан тарихы | ҰБТ	kazupmind.jpg	Қазақстан тарихынан ҰБТ-ға дайындық.	2019-07-17 16:52:26.942427	2019-08-07 23:22:10.618203	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Қазақстан тарихы курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 18-20 ұпай алатын дәрежеге 2 айда жетеді.\r\nСізге курс барысында бір приложение беріледі, ол приложение кез келген құрылғымен жұмыс жасайды.  Ол приложение арқылы ойын форматында тарих сұрақтарын жаттап отырасыз.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы айына <strong>10000</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20000тг болады</tt></strong></p>\r\n
-10	Биология | ҰБТ	biologyent.jpg	Биология пәнінен ҰБТ-ға дайындық	2019-07-17 16:46:58.134006	2019-08-07 23:22:48.228259	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Биология курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді. 	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы айына <strong>10000</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20000тг болады</tt></strong></p>\r\n
+11	Физика | ҰБТ	phis.jpg	Физика пәнінен ҰБТ-ға дайындық	2019-07-17 16:49:40.298514	2019-11-27 20:35:03.478413	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Физика курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы </tt></h3>\r\n\r\n<h3><tt>1 айға <strong>8490</strong></tt><tt>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 35.990тг(5 ай)</tt></strong></p>\r\n
+12	Математика | ҰБТ	матем.jpg	Математика пәнінен ҰБТ-ға дайындық	2019-07-17 16:50:17.643929	2019-11-27 20:25:07.615387	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Математика курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы </tt></h3>\r\n\r\n<h3><tt>1 айға <strong>8490</strong></tt><tt>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 35.990тг(5 ай)</tt></strong></p>\r\n
+10	Биология | ҰБТ	биология.jpg	Биология пәнінен ҰБТ-ға дайындық	2019-07-17 16:46:58.134006	2019-11-27 20:26:46.235322	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Биология курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді. 	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы</tt></h3>\r\n\r\n<h3><tt>1 айға <strong>8490</strong></tt><tt>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 35.990тг(5 ай)</tt></strong></p>\r\n
+13	Математикалық сауаттылық | ҰБТ	логика.jpg	Математикалық сауаттылықтан ҰБТ-ға дайындық.	2019-07-17 16:51:37.319301	2019-11-27 20:24:25.328237	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Математикалық сауаттылық курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 18-20 ұпай алатын дәрежеге 1 айда жетеді.	Сабақтар күн сайын өтеді. Яғни 30 күнде толық 30 сабақ болады.	<h3><tt>Бағасы</tt></h3>\r\n\r\n<h3><tt>1 айға&nbsp;<strong>4950</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20.490тг болады</tt></strong><strong><tt>(5 ай)</tt></strong></p>\r\n
+9	Химия | ҰБТ	химия.jpg	Химия пәнінен ҰБТ-ға дайындық	2019-07-17 16:40:14.16732	2019-11-27 20:23:16.128804	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Химия курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 35-40 ұпай алатын дәрежеге 2 айда жетеді. Сізге курс барысында бір приложение беріледі, ол приложение кез келген құрылғымен жұмыс жасайды.  Ол приложение арқылы ойын форматында тарих сұрақтарын жаттап отырасыз. Сізге курс барысында бір приложение беріледі, ол приложение кез келген құрылғымен жұмыс жасайды. Ол приложение арқылы ойын форматында тарих сұрақтарын жаттап отырасыз.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады. Бірінші айда жалпы химия және бейорганикалық химия өтеміз. Екінші айда органикалық химияны өтеміз.	<h3><tt>Бағасы</tt></h3>\r\n\r\n<h3><tt>1 айға <strong>8490</strong></tt><tt>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 35.990тг(5 ай)</tt></strong></p>\r\n
+14	Қазақстан тарихы | ҰБТ	\N	Қазақстан тарихынан ҰБТ-ға дайындық.	2019-07-17 16:52:26.942427	2019-12-10 14:51:35.700622	linear-gradient(-225deg, #9fffff 0%, #bccccc 48%, #bccccc 100%)	2	Қазақстан тарихы курсы	Курс 25 тамыз басталады	Курс қалай өтеді?	Бұл курстың ерекшелігі - сапалығы. ҰБТ жазған оқушылардың тәжірибелеріне сүйене отырып. Біз жаңа методика жасап шығардық. Бұл методика бойынша сабақтар күнде болады. Сабақтар күнде болғанымен, оқушы жалықпас үшін аз-аздан болады. Курс видео сабақтардан, сабақ барысындағы тапсырмалардан, үй тапсырмаларынан, тестілеулерден және тағы басқа пайдалы материалдардан тұрады. Осы методика арқылы оқушы 0 дәрежесінен 18-20 ұпай алатын дәрежеге 2 айда жетеді.\r\nСізге курс барысында бір приложение беріледі, ол приложение кез келген құрылғымен жұмыс жасайды.  Ол приложение арқылы ойын форматында тарих сұрақтарын жаттап отырасыз.	Сабақтар күн сайын өтеді. Яғни 60 күнде, яғни 2 айда, толық 60 сабақ болады.	<h3><tt>Бағасы</tt></h3>\r\n\r\n<h3><tt>1 айға&nbsp;<strong>4950</strong>тг</tt></h3>\r\n\r\n<p><strong><tt>Толық курс бағасы 20.490тг болады</tt></strong><strong><tt>(5 ай)</tt></strong></p>\r\n
 \.
 
 
 --
--- Data for Name: courses_users; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: courses_users; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.courses_users (id, user_id, course_id) FROM stdin;
@@ -1751,11 +1862,13 @@ COPY public.courses_users (id, user_id, course_id) FROM stdin;
 347	328	13
 348	328	9
 349	291	10
+350	291	12
+351	291	11
 \.
 
 
 --
--- Data for Name: faq_categories; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: faq_categories; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.faq_categories (id, title, language_id) FROM stdin;
@@ -1765,7 +1878,7 @@ COPY public.faq_categories (id, title, language_id) FROM stdin;
 
 
 --
--- Data for Name: faqs; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: faqs; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.faqs (id, question, answer, faq_category_id) FROM stdin;
@@ -1777,7 +1890,7 @@ COPY public.faqs (id, question, answer, faq_category_id) FROM stdin;
 
 
 --
--- Data for Name: feedbacks; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: feedbacks; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.feedbacks (id, first_question, second_question, third_question, user_id, created_at, updated_at, lesson_id) FROM stdin;
@@ -1828,7 +1941,7 @@ COPY public.feedbacks (id, first_question, second_question, third_question, user
 
 
 --
--- Data for Name: hometasks; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: hometasks; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.hometasks (id, user_id, lesson_id, file, created_at, updated_at, rate, comment) FROM stdin;
@@ -1964,12 +2077,13 @@ COPY public.hometasks (id, user_id, lesson_id, file, created_at, updated_at, rat
 491	318	34	1570213950101944999148.jpg	2019-10-04 18:28:35.828036	2019-10-04 18:39:21.867478	\N	\N
 458	313	29	004CF672-13CC-4854-A85A-771F6C9FCE78.jpeg	2019-09-05 18:19:06.439319	2019-09-06 14:53:48.214107	\N	\N
 492	318	38	1570214505346906673055.jpg	2019-10-04 18:48:24.482498	2019-10-04 18:48:24.482498	\N	\N
-493	291	11	\N	2019-10-12 10:50:45.070224	2019-10-12 10:52:08.053397	5	xuynya
+493	291	11	thumb_wide_300.jpg	2019-10-12 10:50:45.070224	2019-11-06 08:18:46.983234	5	xuynya
+494	291	10	\N	2019-11-06 11:04:40.133255	2019-11-06 11:05:58.431201	5	Трек заебись брат
 \.
 
 
 --
--- Data for Name: languages; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: languages; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.languages (id, title, abbr) FROM stdin;
@@ -1979,7 +2093,7 @@ COPY public.languages (id, title, abbr) FROM stdin;
 
 
 --
--- Data for Name: lessons; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: lessons; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.lessons (id, title, content, course_id, created_at, updated_at, video, content_mini, task, description, materials) FROM stdin;
@@ -2060,48 +2174,44 @@ COPY public.lessons (id, title, content, course_id, created_at, updated_at, vide
 
 
 --
--- Data for Name: multiple_answers; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: multiple_answers; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.multiple_answers (id, multiple_question_id, answer, correct) FROM stdin;
-1	1	Да	t
-2	1	Нет	f
-3	2	Да нет	f
-4	2	Ты че не	f
-5	2	Да	t
-6	2	Ага	f
+1	1	15	f
+2	1	10см	t
 \.
 
 
 --
--- Data for Name: multiple_questions; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: multiple_questions; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.multiple_questions (id, multiple_id, question) FROM stdin;
-1	1	Как называлась
-2	1	Ханымыз ким
+1	1	Абылай ханнынкы канша см
 \.
 
 
 --
--- Data for Name: multiple_results; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: multiple_results; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.multiple_results (id, multiple_id, user_id, result, created_at, updated_at) FROM stdin;
-1	1	291	50	2019-10-25 20:17:47.520147	2019-10-25 20:17:47.520147
+1	1	291	100	2019-11-06 08:45:35.833318	2019-11-06 08:45:35.833318
 \.
 
 
 --
--- Data for Name: multiples; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: multiples; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.multiples (id, lesson_id, title, description, created_at, updated_at) FROM stdin;
+1	11	Мидка	\N	2019-11-06 08:43:52.931415	2019-11-06 08:43:52.931415
 \.
 
 
 --
--- Data for Name: news; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: news; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.news (id, title, description_short, description, image, created_at, updated_at, image_dominant_color, content, language_id) FROM stdin;
@@ -2112,7 +2222,7 @@ COPY public.news (id, title, description_short, description, image, created_at, 
 
 
 --
--- Data for Name: programs; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: programs; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.programs (id, title, description, course_id) FROM stdin;
@@ -2126,7 +2236,7 @@ COPY public.programs (id, title, description, course_id) FROM stdin;
 
 
 --
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.schema_migrations (version) FROM stdin;
@@ -2177,23 +2287,23 @@ COPY public.schema_migrations (version) FROM stdin;
 20191025104218
 20191025105025
 20191025201051
+20191125085957
+20191125090354
+20191125093649
 \.
 
 
 --
--- Data for Name: socials; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: socials; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.socials (id, link, label, icon) FROM stdin;
-1	https://www.youtube.com/channel/UCWwcIMsnI193ToFqHEwlZGQ	Youtube	YouTube-icon.png
-2	https://vk.com/upmindkzubt	Вконтакте	Vk-icon.png
-3	https://www.instagram.com/upmind.kz/	Instagram	instaicon.png
-4	https://t.me/upmindent	Телеграм	Telegram-icon.png
+3	https://www.instagram.com/sanabilim.kz/	Instagram	Instagram_icon.png
 \.
 
 
 --
--- Data for Name: student_questions; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: student_questions; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.student_questions (id, lesson_id, user_id, question, created_at, updated_at, answer) FROM stdin;
@@ -2231,7 +2341,7 @@ COPY public.student_questions (id, lesson_id, user_id, question, created_at, upd
 
 
 --
--- Data for Name: template_modules; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: template_modules; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.template_modules (id, title, language_id, label) FROM stdin;
@@ -2277,7 +2387,7 @@ COPY public.template_modules (id, title, language_id, label) FROM stdin;
 
 
 --
--- Data for Name: templates; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: templates; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.templates (id, label, template_module_id, title) FROM stdin;
@@ -2439,20 +2549,21 @@ COPY public.templates (id, label, template_module_id, title) FROM stdin;
 
 
 --
--- Data for Name: user_choices; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: user_choices; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.user_choices (id, multiple_question_id, multiple_answer_id, user_id) FROM stdin;
-14	1	1	291
-15	2	4	291
+1	1	2	291
 \.
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: yernazar
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: deploy
 --
 
 COPY public.users (id, email, encrypted_password, name_surname, phone, gender, reset_password_token, reset_password_sent_at, remember_created_at, created_at, updated_at, birthday, avatar, admin) FROM stdin;
+374	ayatzhunisbay97@gmail.com	$2a$11$hKSXBMNbHIWKZTydMXJPfOTdYdVloZ5qVqrIAPrNGQ/BtHvH63K8C	Аят	87771112233	1	\N	\N	\N	2019-11-09 08:37:51.552029	2019-12-10 14:32:57.440681	2019-11-21 00:00:00	\N	t
+375	asd@asd.asd	$2a$11$Nr6kSBxWpJM0lB5E25ZbNui8dzis.t8/X9hu./x3Fr5/NZ0x4O8EK	asd	123	1	\N	\N	\N	2019-11-18 18:52:11.719447	2019-11-18 18:52:11.719447	\N	\N	\N
 302	ansa.2003@mail.ru	$2a$11$jFDLhOLuudjRd0YZ8yJQgeoIwgjce0tRxf.6DTfKK3HbUgiM0Rjcy	Жарылгасын Ансаган	87712077361	2	\N	\N	2019-09-02 15:19:36.738662	2019-08-31 13:21:35.884265	2019-09-02 15:19:36.745076	2003-02-24 00:00:00	\N	f
 304	aknazzasulanova@gmail.com	$2a$11$mY/TQ3IZ.u4jY7id4KDoleS7XUs9QCeLoU18SMmwMz0ey7tfe8Nam	Жасуланова Акназ	87783988328	2	\N	\N	2019-09-02 15:20:31.633756	2019-08-31 13:30:58.380847	2019-09-02 15:20:31.635642	2003-03-05 00:00:00	\N	f
 301	bayakhmetova0407@gmail.com	$2a$11$.lAp4zvoeK53Es0KKo8SDOSUIRSIqzjukB1XPInUP/RaHCXGGgxU6	Баяхметова Мөлдір	87074273732	2	\N	\N	2019-09-02 15:14:00	2019-08-31 13:19:43.165579	2019-09-02 15:20:43.353542	2002-07-04 00:00:00	\N	f
@@ -2543,186 +2654,209 @@ COPY public.users (id, email, encrypted_password, name_surname, phone, gender, r
 295	dayrenbai03@gmail.com	$2a$11$WnKyc19cJcExl2iXSTu1SuGd1GG5.018FztwWNyLdZu7vXVB4gv.S	Арайлым Дауренбай	87052347874	2	\N	\N	2019-09-03 12:46:11.993398	2019-08-31 11:52:45.318882	2019-09-03 12:46:11.995076	2003-07-02 00:00:00	\N	f
 284	bekzatzhanysbay@gmail.com	$2a$11$pNjzwlAhpIdFoHyJe9WJr.d7FOUHgge1jaoq1XbqBVBMAB3bGKMJi	Бекзат Жанысбай	87471086530	1	\N	\N	2019-09-03 15:55:18.463077	2019-08-31 11:15:36.992487	2019-09-03 15:55:18.465004	1993-02-08 00:00:00	\N	t
 293	symbatarih@gmail.com	$2a$11$nD0heO5P0oBgzodE5unkL.K5fwstzh4pt62gjoJQueK3c9g.lK66K	Тарихқызы Сымбат	87020687340	2	\N	\N	2019-09-04 13:27:49.402743	2019-08-31 11:49:45.181689	2019-09-04 13:27:49.404477	2019-07-10 00:00:00	\N	f
+376	ayatzhunisbay96@gmail.com	$2a$11$d3RmTaPQz8QOlDKnXA7RDOqLPjGed7wH7bR9m3KSp66LreIjmdJ0K	ayat zhunisbay	87079099077	1	\N	\N	\N	2019-11-25 16:20:13.03478	2019-11-25 16:20:13.03478	0012-01-01 00:00:00	\N	\N
 \.
 
 
 --
--- Name: buys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: advantages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.buys_id_seq', 334, true);
+SELECT pg_catalog.setval('public.advantages_id_seq', 5, true);
 
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: buys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+--
+
+SELECT pg_catalog.setval('public.buys_id_seq', 335, true);
+
+
+--
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.ckeditor_assets_id_seq', 1, false);
 
 
 --
--- Name: comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.comments_id_seq', 48, true);
 
 
 --
--- Name: course_faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: cons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+--
+
+SELECT pg_catalog.setval('public.cons_id_seq', 3, true);
+
+
+--
+-- Name: course_faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.course_faqs_id_seq', 73, true);
 
 
 --
--- Name: course_whos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: course_whos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.course_whos_id_seq', 27, true);
+SELECT pg_catalog.setval('public.course_whos_id_seq', 28, true);
 
 
 --
--- Name: courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.courses_id_seq', 16, true);
 
 
 --
--- Name: courses_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: courses_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.courses_users_id_seq', 349, true);
+SELECT pg_catalog.setval('public.courses_users_id_seq', 351, true);
 
 
 --
--- Name: faq_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: faq_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.faq_categories_id_seq', 2, true);
 
 
 --
--- Name: faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.faqs_id_seq', 4, true);
 
 
 --
--- Name: feedbacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: feedbacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.feedbacks_id_seq', 55, true);
 
 
 --
--- Name: hometasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: hometasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.hometasks_id_seq', 493, true);
+SELECT pg_catalog.setval('public.hometasks_id_seq', 494, true);
 
 
 --
--- Name: languages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: languages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.languages_id_seq', 2, true);
 
 
 --
--- Name: lessons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: lessons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.lessons_id_seq', 90, true);
 
 
 --
--- Name: multiple_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: multiple_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.multiple_answers_id_seq', 6, true);
-
-
---
--- Name: multiple_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
---
-
-SELECT pg_catalog.setval('public.multiple_questions_id_seq', 2, true);
+SELECT pg_catalog.setval('public.multiple_answers_id_seq', 2, true);
 
 
 --
--- Name: multiple_results_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: multiple_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+--
+
+SELECT pg_catalog.setval('public.multiple_questions_id_seq', 1, true);
+
+
+--
+-- Name: multiple_results_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.multiple_results_id_seq', 1, true);
 
 
 --
--- Name: multiples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: multiples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.multiples_id_seq', 2, true);
+SELECT pg_catalog.setval('public.multiples_id_seq', 1, true);
 
 
 --
--- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.news_id_seq', 3, true);
 
 
 --
--- Name: programs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: programs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.programs_id_seq', 6, true);
 
 
 --
--- Name: socials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: socials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.socials_id_seq', 4, true);
 
 
 --
--- Name: student_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: student_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.student_questions_id_seq', 76, true);
 
 
 --
--- Name: template_modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: template_modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.template_modules_id_seq', 38, true);
 
 
 --
--- Name: templates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: templates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
 SELECT pg_catalog.setval('public.templates_id_seq', 159, true);
 
 
 --
--- Name: user_choices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
+-- Name: user_choices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
 --
 
-SELECT pg_catalog.setval('public.user_choices_id_seq', 15, true);
-
-
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yernazar
---
-
-SELECT pg_catalog.setval('public.users_id_seq', 373, true);
+SELECT pg_catalog.setval('public.user_choices_id_seq', 1, true);
 
 
 --
--- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deploy
+--
+
+SELECT pg_catalog.setval('public.users_id_seq', 376, true);
+
+
+--
+-- Name: advantages advantages_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.advantages
+    ADD CONSTRAINT advantages_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.ar_internal_metadata
@@ -2730,7 +2864,7 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 
 --
--- Name: buys buys_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: buys buys_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.buys
@@ -2738,7 +2872,7 @@ ALTER TABLE ONLY public.buys
 
 
 --
--- Name: ckeditor_assets ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: ckeditor_assets ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.ckeditor_assets
@@ -2746,7 +2880,7 @@ ALTER TABLE ONLY public.ckeditor_assets
 
 
 --
--- Name: comments comments_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: comments comments_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.comments
@@ -2754,7 +2888,15 @@ ALTER TABLE ONLY public.comments
 
 
 --
--- Name: course_faqs course_faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: cons cons_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.cons
+    ADD CONSTRAINT cons_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: course_faqs course_faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.course_faqs
@@ -2762,7 +2904,7 @@ ALTER TABLE ONLY public.course_faqs
 
 
 --
--- Name: course_whos course_whos_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: course_whos course_whos_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.course_whos
@@ -2770,7 +2912,7 @@ ALTER TABLE ONLY public.course_whos
 
 
 --
--- Name: courses courses_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: courses courses_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.courses
@@ -2778,7 +2920,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: courses_users courses_users_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: courses_users courses_users_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.courses_users
@@ -2786,7 +2928,7 @@ ALTER TABLE ONLY public.courses_users
 
 
 --
--- Name: faq_categories faq_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: faq_categories faq_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.faq_categories
@@ -2794,7 +2936,7 @@ ALTER TABLE ONLY public.faq_categories
 
 
 --
--- Name: faqs faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: faqs faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.faqs
@@ -2802,7 +2944,7 @@ ALTER TABLE ONLY public.faqs
 
 
 --
--- Name: feedbacks feedbacks_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: feedbacks feedbacks_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.feedbacks
@@ -2810,7 +2952,7 @@ ALTER TABLE ONLY public.feedbacks
 
 
 --
--- Name: hometasks hometasks_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: hometasks hometasks_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.hometasks
@@ -2818,7 +2960,7 @@ ALTER TABLE ONLY public.hometasks
 
 
 --
--- Name: languages languages_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: languages languages_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.languages
@@ -2826,7 +2968,7 @@ ALTER TABLE ONLY public.languages
 
 
 --
--- Name: lessons lessons_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: lessons lessons_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.lessons
@@ -2834,7 +2976,7 @@ ALTER TABLE ONLY public.lessons
 
 
 --
--- Name: multiple_answers multiple_answers_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: multiple_answers multiple_answers_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiple_answers
@@ -2842,7 +2984,7 @@ ALTER TABLE ONLY public.multiple_answers
 
 
 --
--- Name: multiple_questions multiple_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: multiple_questions multiple_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiple_questions
@@ -2850,7 +2992,7 @@ ALTER TABLE ONLY public.multiple_questions
 
 
 --
--- Name: multiple_results multiple_results_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: multiple_results multiple_results_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiple_results
@@ -2858,7 +3000,7 @@ ALTER TABLE ONLY public.multiple_results
 
 
 --
--- Name: multiples multiples_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: multiples multiples_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.multiples
@@ -2866,7 +3008,7 @@ ALTER TABLE ONLY public.multiples
 
 
 --
--- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.news
@@ -2874,7 +3016,7 @@ ALTER TABLE ONLY public.news
 
 
 --
--- Name: programs programs_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: programs programs_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.programs
@@ -2882,7 +3024,7 @@ ALTER TABLE ONLY public.programs
 
 
 --
--- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.schema_migrations
@@ -2890,7 +3032,7 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
--- Name: socials socials_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: socials socials_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.socials
@@ -2898,7 +3040,7 @@ ALTER TABLE ONLY public.socials
 
 
 --
--- Name: student_questions student_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: student_questions student_questions_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.student_questions
@@ -2906,7 +3048,7 @@ ALTER TABLE ONLY public.student_questions
 
 
 --
--- Name: template_modules template_modules_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: template_modules template_modules_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.template_modules
@@ -2914,7 +3056,7 @@ ALTER TABLE ONLY public.template_modules
 
 
 --
--- Name: templates templates_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: templates templates_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.templates
@@ -2922,7 +3064,7 @@ ALTER TABLE ONLY public.templates
 
 
 --
--- Name: user_choices user_choices_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: user_choices user_choices_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.user_choices
@@ -2930,7 +3072,7 @@ ALTER TABLE ONLY public.user_choices
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: yernazar
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
 --
 
 ALTER TABLE ONLY public.users
@@ -2938,21 +3080,21 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: index_ckeditor_assets_on_type; Type: INDEX; Schema: public; Owner: yernazar
+-- Name: index_ckeditor_assets_on_type; Type: INDEX; Schema: public; Owner: deploy
 --
 
 CREATE INDEX index_ckeditor_assets_on_type ON public.ckeditor_assets USING btree (type);
 
 
 --
--- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: yernazar
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: deploy
 --
 
 CREATE UNIQUE INDEX index_users_on_email ON public.users USING btree (email);
 
 
 --
--- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: yernazar
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: deploy
 --
 
 CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING btree (reset_password_token);

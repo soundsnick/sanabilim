@@ -1,6 +1,6 @@
 - @courses.each do |course|
   .course data-id=course.id
-    .course__image--wrapper
+    .course__image--wrapper style="background-image: url(#{course.image.url})"
       / img.course__ima ge src=
     .course__info
       h4.course__title

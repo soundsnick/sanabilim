@@ -66,6 +66,11 @@ ru:
         few: Уроки
         many: Уроки
         other: Уроки
+      landing_query:
+        one: Заявки
+        few: Заявки
+        many: Заявки
+        other: Заявки
       social:
         one: Социальные сети
         few: Социальные сети

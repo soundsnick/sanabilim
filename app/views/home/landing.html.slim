@@ -6,6 +6,32 @@
           h1.landing-title = text('landing', 'title')
           p.landing-description = text('landing', 'description')
           a.circled.uk-button.uk-button-primary href=courses_path = text('landing', 'more')
+        .uk-flex-1
+          .contact-block
+            .contact-block__title = "Тегін консультация алу үшін форманы толтырыңыз"
+            form action="/landingquery" method="post"
+              input name="name" type="text" placeholder=text('course-landing', 'name')
+              input name="phone" type="text" placeholder=text('course-landing', 'phone')
+              input class="circled uk-button uk-button-primary" type="submit" value="Жіберу"
+  .ent
+    .container
+      .ent__title = "ҰБТға қалды:"
+      div class="myCountdown" data-date="2020-06-20 0:0:0"
+        div
+          span class="counter-days"
+          = " күн"
+        = ":"
+        div
+          span class="counter-hours"
+          = " сағат"
+        = ":"
+        div
+          span class="counter-minutes"
+          = " минут"
+        = ":"
+        div
+          span class="counter-seconds"
+          = " секунд"
   .landing-cons
     .container
       h3.con-title = "4 ПРЕИМУЩЕСТВА ПОДГОТОВКИ НА КУРСАХ SANABILIM"
@@ -53,33 +79,35 @@ scss:
     width: 100%;
     top: 38px;
     left: 0;
-    padding: 20px 0;
+    padding: 15px 0;
     z-index: 9999;
-    background: #4045b5;
+    background: #FAFCFF;
     transition: background 0.2s, padding 0.2s;
     border: none;
+    border-bottom: 1px solid #f3f3f3;
+    box-shadow: 0 5px 9px -10px rgba(0, 0, 0, .1);
   }
-  .logo, .logo b{
-    color: #fff;
+  .sign-links .nav__item{
+    border: 1px solid rgba(198, 198, 198, 0.73);
+    padding: 7px 30px;
+    border-radius: 6px;
+    background: #fff;
   }
   .nav__item{
-    font-size: 11px;
-    text-transform: uppercase;
-    margin: 0 10px;
-    font-weight: 400;
-    color: #fff!important;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 0 13px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: #000;
     transition: opacity 0.2s;
     opacity: 1;
   }
-  .nav__item, .nav__item.account{
-    color: rgba(255,255,255,.8);
-  }
   .nav__item:hover, .nav__item.account:hover{
-    color: rgba(255,255,255,1);
+    color: #000;
   }
   .header.active{
     position: fixed;
-    background: #4045b5;
     padding: 15px 0;
     box-shadow: 0 11px 8px -9px rgba(0,0,0,.05);
   }

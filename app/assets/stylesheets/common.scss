@@ -194,18 +194,29 @@ application{
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 35px;
   div{
-    padding: 0 5px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 16px;
   }
 }
 .ent{
-  background: #21268e;
-  color: #fff;
-  padding: 6px;
+  background: #ffffff;
+  color: #000;
   font-size: 12px;
   text-align: center;
-  .container{
-    display: flex;
-    justify-content: space-between;
-  }
+  padding: 100px 0;
+  padding-bottom: 130px;
+}
+.ent__title{
+  font-size: 27px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.ent span{
+  font-size: 60px;
 }
