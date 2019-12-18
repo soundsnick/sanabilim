@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def index
     if user_signed_in?
@@ -20,5 +21,13 @@ class HomeController < ApplicationController
     @cons = Con.all
     @adv = Advantage.all
     @courses = get_language.courses.all
+  end
+
+  def order
+    if @buy = LandingQuery.new(params.permit(:name, :contact)).save
+      render 'home/success'
+    else
+      redirect_to landing_path, notice: 'Ошибка'
+    end
   end
 end

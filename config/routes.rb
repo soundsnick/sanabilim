@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   put 'hometask.:id(.:format)', to: 'hometasks#hometask_send', as: :hometask_send
   put 'hometasks', to: 'hometasks#hometask_new', as: :hometask_new
   post 'buy', to: 'courses#buy'
+  post 'landingquery', to: 'home#order'
 
   get 'news', to: 'news#index', as: :news
   get 'new.:id(.:format)', to: 'news#new', as: :new
