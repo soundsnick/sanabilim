@@ -55,8 +55,27 @@
     .logo-wrapper{
         flex: 1;
     }
+    .conss{
+        grid-template-columns: repeat(2, auto);
+    }
 }
 @media only screen and (max-width: 600px){
+    .myCountdown div{
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 20px;
+    }
+    .ent span{
+        font-size: 40px;
+    }
+    .conss{
+        grid-template-columns: repeat(1, auto);
+    }
+    .forwhos{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
     .courses-grid, .who-grid{
         grid-template-columns: repeat(1, minmax(100px, 1fr));
     }

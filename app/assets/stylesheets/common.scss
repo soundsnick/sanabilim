@@ -36,8 +36,13 @@ html input.uk-input, html select.uk-select{
 }
 .header{
   background: #fff;
-  padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+.logo-image{
+  height: 69px;
+  display: block;
+  background-color: blue;
+  transition: border-radius 0.2s;
 }
 .logo{
   margin: 0;
@@ -205,7 +210,6 @@ application{
   }
 }
 .ent{
-  background: #ffffff;
   color: #000;
   font-size: 12px;
   text-align: center;

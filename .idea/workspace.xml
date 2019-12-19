@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2089535e-8ebb-4361-9aac-a8b7c5b4e2c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/landing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/landing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/media.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/landing.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/landing.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +216,7 @@
       <workItem from="1574669921051" duration="5975000" />
       <workItem from="1574817650694" duration="44000" />
       <workItem from="1576664898294" duration="7953000" />
+      <workItem from="1576720636964" duration="5988000" />
     </task>
     <servers />
   </component>

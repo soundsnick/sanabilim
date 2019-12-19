@@ -188,3 +188,123 @@
     margin-top: 10px;
   }
 }
+.forwhos{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  text-align: center;
+  grid-gap: 30px;
+  padding: 30px 0;
+}
+.forwho{
+  background: #f9f9f9;
+  box-shadow: 0 9px 10px -5px rgba(0,0,0,.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.forwho__number{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  padding: 40px 0;
+  background: linear-gradient(to right, orange, #ff6d00);
+}
+.forwho__title{
+  font-size: 20px;
+  color: #000;
+  line-height: 1.3;
+  font-weight: 300;
+  padding: 0 35px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.landing-courseinfoblock{
+  padding: 80px 0;
+  background: #6849b6;
+  color: #fff;
+  .con-title{
+    color: #fff;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+.landing-courseinfos{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-gap: 20px;
+}
+.landing-courseinfo{
+  background: #fff;
+  color: #282828;
+  padding: 20px;
+  font-size: 19px;
+  border-radius: 2px;
+  line-height: 1.2;
+}
+.landing-tarifs{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 20px;
+}
+.landing-tarif{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  &block{
+    background: #fff;
+    padding: 80px 0;
+    a{
+      display: block;
+      max-width: 300px;
+      margin: auto;
+      margin-top: 30px;
+      font-size: 14px!important;
+      padding: 3px;
+    }
+  }
+  &:nth-child(1){
+    background: #6849b6;
+    color: #fff;
+  }
+  &:nth-child(2){
+    background: #2196F3;
+    color: #fff;
+  }
+  &:nth-child(3){
+    background: #E91E63;
+    color: #fff;
+  }
+  &__header{
+    padding: 25px 15px;
+    text-align: center;
+    color: inherit;
+    font-size: 23px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.2);
+  }
+  ul{
+    margin: 0;
+  }
+  &__child{
+    font-size: 17px;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  &__subjects-block{
+    padding: 30px;
+    flex: 1;
+    font-weight: 300;
+  }
+  &__costs-block{
+    padding: 30px;
+    background: rgba(0,0,0,.1);
+    color: #fff;
+    font-weight: 300;
+
+  }
+}

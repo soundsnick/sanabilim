@@ -16,9 +16,7 @@ html
             .logo-wrapper
               h1.logo
                 a href=root_path
-                  = "Sana"
-                  b = "Bilim"
-                  = ".kz"
+                  img src=asset_url('logo.svg') class="logo-image"
             .lang
               - not_set_languages.each do |lang|
                 a.nav__item href=language_path(lang.abbr) = lang.title

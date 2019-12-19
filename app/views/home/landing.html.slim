@@ -1,6 +1,6 @@
 .landing
   .landing-header
-    .container
+    .container#buy
       .uk-flex
         .uk-flex-1
           h1.landing-title = text('landing', 'title')
@@ -32,6 +32,29 @@
         div
           span class="counter-seconds"
           = " секунд"
+
+  .landing-cons style="background: #fff"
+    .container
+      h3.con-title = "Курс кімдерге арналған?"
+      .forwhos
+        .forwho
+          .forwho__number = "1"
+          p.forwho__title = "Жоғарғы нәтиже көрсеткісі келетіндерге."
+        .forwho
+          .forwho__number = "2"
+          p.forwho__title = "ҰБТ-ға дайындалып жүрген, алайда нақты жоспары жоқ түлектерге."
+        .forwho
+          .forwho__number = "3"
+          p.forwho__title = "Қысқа мерзім ішінде нәтижесін 10-15 ұпайға арттырғысы келетіндерге."
+        .forwho
+          .forwho__number = "4"
+          p.forwho__title = "Уақытын үнемдеп, тиімді әдіс-тәсілдерімен дайындалу жолдарын ізденушілерге. "
+        .forwho
+          .forwho__number = "5"
+          p.forwho__title = "Дайындық кезінде стресс, қобалжу сияқты проблемалары бар жандарға."
+        .forwho
+          .forwho__number = "6"
+          p.forwho__title = "Ата-анасының үмітін ақтап, грант иегері атанғысы келетіндерге."
   .landing-cons
     .container
       h3.con-title = "4 ПРЕИМУЩЕСТВА ПОДГОТОВКИ НА КУРСАХ SANABILIM"
@@ -43,6 +66,34 @@
             .adv__info
               span.adv__title = con.title
               p.adv__description = con.description
+  .landing-courseinfoblock
+    .container
+      h3.con-title = "Курстар жайлы анықтама"
+      .landing-courseinfos
+        .landing-courseinfo
+          = "Бір айдың ішінде жалпы алғанда 20 сабақ болады."
+        .landing-courseinfo
+          = "Әр апта сайын өтілген материал бойынша білім тексеру сынақтар болады. "
+        .landing-courseinfo
+          = "Біздің мұғалімдер оқушылардың үлгерімін бақылап отырады және кеңестер беріп отырады. "
+        .landing-courseinfo
+          = "Видео сабақтарды кез келген уақытта қайталап көруге мүмкіндігіңіз болады. "
+  .landing-courseinfoblock style="background: #6b7de0"
+    .container
+      h3.con-title = "Сіз жақтан қажет ететін нәрселер"
+      .landing-courseinfos style="grid-template-columns: repeat(3, minmax(100px, 1fr))"
+        .landing-courseinfo
+          = "Интернетке қол жетімді болу керек"
+        .landing-courseinfo
+          = "Видео сабақтарды көру үшін, ноутбук немесе компьютер секілді гаджет."
+        .landing-courseinfo
+          = "Жақсы көңіл-күй."
+  .landing-courseinfoblock style="background: #e84c60"
+    .container
+      h3.con-title = "Курстар жайлы толық ақпарат алу үшін әрбір курстың жеке сиппатамасына өтіңіз. Ол жерде сіз"
+      .landing-courseinfos style="grid-template-columns: repeat(1, auto)"
+        .landing-courseinfo
+          = "Курстың толық дайындық жоспары мен бірінші тегін сабақты көре аласыздар."
   .landing-conss
     .container
       h3.con-title = "Тек тәжірибелі мұғалімдер"
@@ -65,6 +116,85 @@
                 h4.landing-course__title = course.title
                 p.landing-course__paragraph = course.description
                 a.uk-button.uk-button-primary.circled href=course_path(course) = text('landing', 'more')
+  .landing-tarifblock
+    .container
+      h3.con-title = "Бағалар"
+      .landing-tarifs
+        .landing-tarif
+          .landing-tarif__header = "Стандарт"
+          .landing-tarif__child
+            .landing-tarif__subjects-block
+              = "Пәндер"
+              ul.landing-tarif__subjects
+                li = "Физика"
+                li = "Химия"
+                li = "Биология"
+                li = "Математика"
+                li = "Ағылшын тілі"
+                li = "География"
+                li = "Дуниежузі тарихы"
+            .landing-tarif__costs-block
+              ul.landing-tarif__costs
+                li = "1 айға - 8,490 тг"
+                li = "3 айға - 21,490 тг"
+                li = "5 айға - 29,990 тг"
+          .landing-tarif__child
+            .landing-tarif__subjects-block
+              = "Пәндер"
+              ul.landing-tarif__subjects
+                li = "Қазақстан тарихы"
+                li = "Математикалық сауаттылық"
+            .landing-tarif__costs-block
+              ul.landing-tarif__costs
+                li = "1 айға - 4,950 тг"
+                li = "3 айға - 11,490 тг"
+                li = "5 айға - 17,490 тг"
+        .landing-tarif
+          .landing-tarif__header = "Премиум"
+          .landing-tarif__child
+            .landing-tarif__subjects-block
+              = "Пәндер"
+              ul.landing-tarif__subjects
+                li = "Физика"
+                li = "Химия"
+                li = "Биология"
+                li = "Математика"
+                li = "Ағылшын тілі"
+                li = "География"
+                li = "Дуниежузі тарихы"
+            .landing-tarif__costs-block
+              ul.landing-tarif__costs
+                li = "Бейімдік пәнге бір мезгілде жазылған жағдайда, математикалық сауаттылық курсы тегін беріледі"
+                li = "2 бейіндік пән  16,980 тг"
+                li = "Математикалық сауаттылық 4,950 тг"
+                li = "1 айға: 21,930 тг орнына 14,990 тг"
+                li = "3 айға: 54,470 тг орнына 29,990 тг"
+                li = "5 айға: 77,290 тг орнына 39,990 тг"
+        .landing-tarif
+          .landing-tarif__header = "Премиум 2"
+          .landing-tarif__child
+            .landing-tarif__subjects-block
+              = "Пәндер"
+              ul.landing-tarif__subjects
+                li = "Физика"
+                li = "Химия"
+                li = "Биология"
+                li = "Математика"
+                li = "Ағылшын тілі"
+                li = "География"
+                li = "Дуниежузі тарихы"
+                li = "+2 бейімдік пән"
+                li = "+ қазақстан тарихы"
+                li = "+матемаиикалық сауаттылық"
+                li = "+ марофон: 140 ол арман емес, ол мақсат"
+            .landing-tarif__costs-block
+              ul.landing-tarif__costs
+                li = "2 бейімдік пән: 16,980 тг"
+                li = "Қазақстан тарих: 4,950 тг"
+                li = "Математикалық сауаттылық: 4,950 тг"
+                li = "Марафон: 3,000 тг "
+                li = "1 айға: 29,890 тг орнына 19,890 тг"
+      a.uk-button.uk-button-primary.circled href="#buy" = "Жазылу"
 footer.footer.uk-card.uk-card-default.uk-card-body style="box-shadow: none"
   .container
     .uk-flex
@@ -79,7 +209,6 @@ scss:
     width: 100%;
     top: 38px;
     left: 0;
-    padding: 15px 0;
     z-index: 9999;
     background: #FAFCFF;
     transition: background 0.2s, padding 0.2s;
@@ -100,16 +229,18 @@ scss:
     font-weight: 300;
     font-family: sans-serif;
     color: #000;
-    transition: opacity 0.2s;
-    opacity: 1;
+    transition: color 0.2s;
   }
   .nav__item:hover, .nav__item.account:hover{
-    color: #000;
+    color: #214cc1;
   }
   .header.active{
     position: fixed;
-    padding: 15px 0;
+    padding: 5px 0;
     box-shadow: 0 11px 8px -9px rgba(0,0,0,.05);
+  }
+  .header.active .logo-image{
+    border-radius: 4px;
   }
   .container{
     position: relative;
