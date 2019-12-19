@@ -11,7 +11,7 @@
             .contact-block__title = "Тегін консультация алу үшін форманы толтырыңыз"
             form action="/landingquery" method="post"
               input name="name" type="text" placeholder=text('course-landing', 'name')
-              input name="phone" type="text" placeholder=text('course-landing', 'phone')
+              input name="contact" type="text" placeholder=text('course-landing', 'phone')
               input class="circled uk-button uk-button-primary" type="submit" value="Жіберу"
   .ent
     .container
@@ -94,16 +94,16 @@
       .landing-courseinfos style="grid-template-columns: repeat(1, auto)"
         .landing-courseinfo
           = "Курстың толық дайындық жоспары мен бірінші тегін сабақты көре аласыздар."
-  .landing-conss
-    .container
-      h3.con-title = "Тек тәжірибелі мұғалімдер"
-      p.con-description = "Бізбен бірге сіз ҰБТ-ны өте жақсы тапсырасыз!"
-      .cons
-        - @cons.each do |con|
-          .con
-            img.con__icon src=con.icon
-            span.con__title = con.title
-            p.con__description = con.description
+  / .landing-conss
+  /   .container
+  /     h3.con-title = "Тек тәжірибелі мұғалімдер"
+  /     p.con-description = "Бізбен бірге сіз ҰБТ-ны өте жақсы тапсырасыз!"
+  /     .cons
+  /       - @cons.each do |con|
+  /         .con
+  /           img.con__icon src=con.icon
+  /           span.con__title = con.title
+  /           p.con__description = con.description
   .landing-content
     .landing-courses
       .container
