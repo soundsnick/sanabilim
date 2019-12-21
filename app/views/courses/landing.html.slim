@@ -52,15 +52,15 @@ section.course-landing__forwho#program style="padding-bottom: 80px  "
         input name="phone" type="text" placeholder=text('course-landing', 'phone')
         input name="course_id" type="hidden" value=@course.id
         input type="submit" value=text('course-landing', 'button')
-section.course-landing__forwhos
-  .container
-    h2.course-landing__about-title = text('header', 'faq')
-    ul.faq-list[uk-accordion]
-      - @course.course_faqs.each do |faq|
-        li.uk-card.uk-card-default.uk-card-body.question
-          a class="uk-accordion-title faq-title" href="#" = faq.title
-          .uk-accordion-content
-            p.faq__answer = faq.answer
+/ section.course-landing__forwhos
+/   .container
+/     h2.course-landing__about-title = text('header', 'faq')
+/     ul.faq-list[uk-accordion]
+/       - @course.course_faqs.each do |faq|
+/         li.uk-card.uk-card-default.uk-card-body.question
+/           a class="uk-accordion-title faq-title" href="#" = faq.title
+/           .uk-accordion-content
+/             p.faq__answer = faq.answer
 footer.footer.uk-card.uk-card-default.uk-card-body style="box-shadow: none"
   .container
     .uk-flex

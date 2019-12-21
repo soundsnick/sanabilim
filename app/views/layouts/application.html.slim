@@ -29,8 +29,7 @@ html
               - if user_signed_in?
                 a.nav__item href=hometasks_path = text('header', 'hometasks')
                 a.nav__item href=questions_path = text('questions', 'title')
-              a.nav__item href=faq_path = text('header', 'faq')
-              a.nav__item href=rules_path = text('header', 'rules')
+              / a.nav__item href=rules_path = text('header', 'rules')
               - if current_user.try(:admin?)
                 a.nav__item href=rails_admin_path = "Администрация"
               .sign-links
